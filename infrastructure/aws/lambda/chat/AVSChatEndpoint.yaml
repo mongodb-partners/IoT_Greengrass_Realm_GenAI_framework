@@ -1,0 +1,65 @@
+# This AWS SAM template has been generated from your function's 
+# configuration. If your function has one or more triggers, note 
+# that the AWS resources associated with these triggers aren't fully 
+# specified in this template and include placeholder values.Open this template 
+# in AWS Application Composer or your favorite IDE and modify 
+# it to specify a serverless application with other AWS resources. 
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  AVSChatEndpoint:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: .
+      Description: ''
+      MemorySize: 1024
+      Timeout: 300
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.11
+      Architectures:
+        - x86_64
+      EventInvokeConfig:
+        MaximumEventAgeInSeconds: 21600
+        MaximumRetryAttempts: 2
+      EphemeralStorage:
+        Size: 512
+      Environment:
+        Variables:
+          MONGODB_CONNECTION_STRING: >-
+            mongodb+srv://db_user:o65uhHlWDIJ9qTE0@iiot.ai2jg.mongodb.net/default_db?retryWrites=true&w=majority
+          MONGODB_DB: default_db
+          MONGODB_DB_COLLECTION: default_collection
+          OPENAI_API_KEY: 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
+          OPENAI_API_KEY_FREE: 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
+      FunctionUrlConfig:
+        AuthType: NONE
+        InvokeMode: BUFFERED
+        Cors:
+          AllowCredentials: false
+          AllowHeaders:
+            - '*'
+          AllowMethods:
+            - POST
+          AllowOrigins:
+            - '*'
+          ExposeHeaders: []
+          MaxAge: 0
+      RuntimeManagementConfig:
+        UpdateRuntimeOn: Auto
+      SnapStart:
+        ApplyOn: None
+      PackageType: Zip
+      Policies:
+        - Statement:
+            - Effect: Allow
+              Action:
+                - logs:CreateLogGroup
+              Resource: arn:aws:logs:us-east-1:944069471838:*
+            - Effect: Allow
+              Action:
+                - logs:CreateLogStream
+                - logs:PutLogEvents
+              Resource:
+                - >-
+                  arn:aws:logs:us-east-1:944069471838:log-group:/aws/lambda/AVSChatEndpoint:*
