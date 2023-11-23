@@ -1,0 +1,17 @@
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: MIT-0
+
+version: '3.7'
+
+services:
+  greengrass:
+    init: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: realmgreengrass
+    image: realmgreengrass
+    env_file:
+      - .env
+    volumes:  
+      - ./greengrass-v2-credentials:/root/.aws/:ro

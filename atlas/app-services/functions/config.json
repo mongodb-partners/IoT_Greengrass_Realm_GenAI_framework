@@ -1,11 +1,5 @@
 [
     {
-        "name": "test",
-        "private": false,
-        "run_as_system": true,
-        "disable_arg_logs": true
-    },
-    {
         "name": "awsIotGreengrassDeviceHealth",
         "private": false,
         "run_as_system": true,
@@ -18,5 +12,10 @@
     {
         "name": "onUserCreation",
         "private": false
+    },
+    {
+        "name": "retrieveApiGatewayApiKey",
+        "private": false,
+        "disable_arg_logs": true
     }
 ]

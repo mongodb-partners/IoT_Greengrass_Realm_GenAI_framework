@@ -12,7 +12,7 @@ To get started with the application, follow these steps:
     cd frontend/fleet-ui
     ```
 
-3. **Install dependencies:**
+2. **Install dependencies:**
 
     ```bash
     npm install
@@ -32,6 +32,10 @@ To start the application, use the following commands:
 
     Once the development server starts, the application will be available at: `http://localhost:3000`.
 
+3. **Enable email-password authentication and create an App User with email and password in [Atlas App Services](https://www.mongodb.com/docs/atlas/app-services/users/create/#manually-create-an-email-password-user)**
+
+![AppUser](../../media/app-services-user-create.png)
+  
 ## Features
 
 ### Viewing Vehicles

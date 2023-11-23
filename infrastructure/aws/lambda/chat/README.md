@@ -1,1 +1,0 @@
-# Setting up AVS + OpenAI chat endpoint in Lambda

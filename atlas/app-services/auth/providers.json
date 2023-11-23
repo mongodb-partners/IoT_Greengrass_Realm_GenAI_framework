@@ -2,7 +2,7 @@
     "anon-user": {
         "name": "anon-user",
         "type": "anon-user",
-        "disabled": false
+        "disabled": true
     },
     "api-key": {
         "name": "api-key",
@@ -13,9 +13,9 @@
         "name": "custom-function",
         "type": "custom-function",
         "config": {
-            "authFunctionName": "test"
+            "authFunctionName": "onUserCreation"
         },
-        "disabled": false
+        "disabled": true
     },
     "custom-token": {
         "name": "custom-token",
@@ -31,7 +31,7 @@
                 "token"
             ]
         },
-        "disabled": false
+        "disabled": true
     },
     "local-userpass": {
         "name": "local-userpass",
