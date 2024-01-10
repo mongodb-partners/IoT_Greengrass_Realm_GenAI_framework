@@ -9,6 +9,8 @@
 
 Here we are building the C++ application with MQTT consumer and Realm Device sync to consume the message from the MQTT transport and store it in the Realm database which will be synced to MongoDB in real-time via Device Sync
 
+Change the Realm App Id **realm::App("REALM_APP_ID");**
+
 Enable api-key authentication and create an api-key in [Mongo App Services](https://www.mongodb.com/docs/atlas/app-services/authentication/api-key/#create-a-server-api-key)
 Use this api-key inside the c++ code in **consumer.cpp** file in **realm::App::credentials::api_key("API_KEY")**
 

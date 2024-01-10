@@ -24,6 +24,7 @@
 #error "No EventLoop implementation selected"
 #endif
 
+using namespace std::chrono;
 using json = nlohmann::json;
 
 struct SensorDatum: realm::object<SensorDatum> {
@@ -48,6 +49,8 @@ const std::string DFLT_ADDRESS { "host.docker.internal:1883" };
 const string CLIENT_ID		{ "" };
 
 const string TOPIC 			{ "topic" };
+const auto PERIOD = seconds(5);
+const int MAX_BUFFERED_MSGS = 120;
 
 const int  QOS = 1;
 
@@ -55,13 +58,14 @@ int main(int argc, char* argv[])
 {
 	mqtt::async_client cli(DFLT_ADDRESS, CLIENT_ID);
 
-	auto connOpts = mqtt::connect_options_builder()
-		.clean_session(false)
-		.finalize();
+	mqtt::connect_options connOpts;
+	connOpts.set_keep_alive_interval(MAX_BUFFERED_MSGS * PERIOD);
+	connOpts.set_clean_session(true);
+	connOpts.set_automatic_reconnect(true);
 
 	try {
 
-        auto app = realm::App("greengrasstest-jnsko");
+        auto app = realm::App("REALM_APP_ID");
         auto user = app.login(realm::App::credentials::api_key("API_KEY")).get();
         auto config = user.flexible_sync_configuration();
 
@@ -144,3 +148,4 @@ int main(int argc, char* argv[])
 
  	return 0;
 }
+

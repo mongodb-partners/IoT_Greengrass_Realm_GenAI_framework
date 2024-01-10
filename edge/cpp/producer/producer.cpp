@@ -51,7 +51,7 @@ int main(int argc, char* argv[])
 		auto msec = duration_cast<milliseconds>(now.time_since_epoch()).count();
 
 		json payload;
-		payload["vehicleId"] = "652ed1957fb496144946ae74";
+		payload["vehicleId"] = std::getenv("VEHICLE_ID");
 		payload["current"] = GenerateRandom(-1.0, 1);
 		payload["voltage"] = GenerateRandom(1.0, 15);
 		payload["timestamp"] = msec;

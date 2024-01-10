@@ -29,7 +29,7 @@ docker build -t vehicle1 .
 To run the docker container
 
 ```
-docker run --name vehicle1 -d vehicle1
+docker run -e VEHICLE_ID=<VEHICLE_ID> --name vehicle1 -d vehicle1
 ```
 
 To view running containers

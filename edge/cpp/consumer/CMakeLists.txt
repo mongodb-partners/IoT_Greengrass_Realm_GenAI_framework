@@ -7,12 +7,12 @@ set(CMAKE_CXX_STANDARD 17)
 set(PAHO_ENABLE_TESTING false CACHE BOOL "ignore")
 set(PAHO_BUILD_STATIC true CACHE BOOL "ignore")
 set(PAHO_BUILD_SHARED false CACHE BOOL "ignore")
-set(CMAKE_CXX_FLAGS "-lpaho-mqttpp3")
-set(CMAKE_CXX_FLAGS "-lpaho-mqtt3as")
 
 Include(FetchContent)
 
 find_package(PahoMqttCpp REQUIRED)
+find_package(eclipse-paho-mqtt-c REQUIRED)
+find_package(OpenSSL REQUIRED)
 
 # Force Realm to use whatever version of OpenSSL you have installed on your system
 set(REALM_USE_SYSTEM_OPENSSL ON)
@@ -33,5 +33,7 @@ FetchContent_MakeAvailable(cpprealm)
 add_executable(consumer consumer.cpp)
 
 target_link_libraries(consumer PahoMqttCpp::paho-mqttpp3) 
+target_link_libraries(consumer eclipse-paho-mqtt-c::paho-mqtt3as)
+target_link_libraries(consumer OpenSSL::SSL)
 target_link_libraries(consumer cpprealm)
 target_link_libraries(consumer nlohmann_json::nlohmann_json)
