@@ -30,7 +30,6 @@ Resources:
             mongodb+srv://
           MONGODB_DB: default_db
           MONGODB_DB_COLLECTION: default_collection
-          OPENAI_API_KEY: sk-
       FunctionUrlConfig:
         AuthType: NONE
         InvokeMode: BUFFERED

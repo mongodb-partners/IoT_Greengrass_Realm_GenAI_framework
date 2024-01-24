@@ -1,4 +1,4 @@
-# Setting up OpenAI chat endpoint in Lambda
+# Setting up AVS chat endpoint in Lambda
 
 ## Prerequisites
 
@@ -16,8 +16,6 @@ Provide a name for your function, be sure to choose Python 3.11 as the Runtime a
 ## Deploying to Lambda
 
 Now that our chat Lambda function is created, we'll deploy our code to it.
-
-The chat function needs additional packages, namely **llama-index (v0.8.56)** and **pymongo (v4.6.0)** to interface with OpenAI and the Atlas cluster.
 
 On your local machine, install the packges in the same folder you place lambda_function.py in. You can install packages to a specific folder using the below command
 
@@ -43,4 +41,4 @@ Open up the Lambda function, go to configuration and configure the below environ
 
 ![Lambda env vars](../../../media/chat-env-vars.png)
 
-Fill in the values with your cluster's connection string and your OpenAI API key and save.
+Fill in the values with your cluster's connection string and save.
