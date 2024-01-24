@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { makeApiCall } from '../utils/helpers';
-import { OPENAI_API } from '../../sync.config.js';
+import { SUPPORT_ASSISTANT_API } from '../../sync.config.js';
 
 type MessageType = {
   text: string;
@@ -65,7 +65,7 @@ export function HelpScreen({ route }) {
     };
 
 
-    makeApiCall<{}>(OPENAI_API.url, 60000, postData, 'POST', customHeaders)
+    makeApiCall<{}>(SUPPORT_ASSISTANT_API.url, 60000, postData, 'POST', customHeaders)
       .then((data) => {
         //console.log('API Response:', data);
         const botResponse: MessageType = {
