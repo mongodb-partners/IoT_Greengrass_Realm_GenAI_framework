@@ -41,4 +41,4 @@ Open up the Lambda function, go to configuration and configure the below environ
 
 ![Lambda env vars](../../../media/chat-env-vars.png)
 
-Fill in the values with your cluster's connection string and save.
+Fill in the values with your cluster's connection string, db name, collection name and save.
