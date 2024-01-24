@@ -67,7 +67,7 @@ use '\_id' field to map Jobs with the user.
 
 ### Config
 
-Use sync.config.js to setup **AppID** and **OpenAI API Url**.
+Use sync.config.js to setup **AppID** and **AWS Lambda HTTP Url**.
 
 ### Environment Configurations
 
