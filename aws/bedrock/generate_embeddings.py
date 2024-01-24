@@ -18,21 +18,6 @@ bedrock_runtime = session.client(
     region_name="us-east-1",
 )
 
-from langchain_community.llms import Bedrock
-
-model_id = os.environ["MODEL_ID"]
-model_kwargs =  { 
-    "maxTokenCount": 4096,
-    "temperature": 0.0,
-    "topP": 1,
-    "stopSequences": [],
-}
-llm = Bedrock(
-    client=bedrock_runtime,
-    model_id=model_id,
-    model_kwargs=model_kwargs
-)
-
 from langchain_community.embeddings import BedrockEmbeddings
 
 # create embeddings
