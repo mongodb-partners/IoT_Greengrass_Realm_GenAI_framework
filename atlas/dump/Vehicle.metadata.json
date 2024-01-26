@@ -1,1 +1,0 @@
-{"options":{"changeStreamPreAndPostImages":{"enabled":true}},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"b99153e0baca4f63b657569609350d7b","collectionName":"Vehicle","type":"collection"}

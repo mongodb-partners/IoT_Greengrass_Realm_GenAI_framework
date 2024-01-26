@@ -1,1 +1,0 @@
-{"options":{"changeStreamPreAndPostImages":{"enabled":true}},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"7cbe469693d347c38997001c51acdaa5","collectionName":"SensorData","type":"collection"}

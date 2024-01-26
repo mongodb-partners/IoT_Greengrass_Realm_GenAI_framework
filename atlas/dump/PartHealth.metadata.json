@@ -1,1 +1,0 @@
-{"options":{"changeStreamPreAndPostImages":{"enabled":true}},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"39682dff69a24320976c7bec005134c2","collectionName":"PartHealth","type":"collection"}
