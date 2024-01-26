@@ -32,7 +32,7 @@ With the previous steps done, vehicle telemetry would flow to MongoDB, then to A
 
 [Set up Field Technician's Mobile Application](./6.%20mobile/)
 
-### 7. Set up Fleet Dashboard
+### Part 7. Set up Fleet Dashboard
 
 The Fleet dashboard shows all vehicle maintenance jobs, vehicle information, and parts inventory.
 
