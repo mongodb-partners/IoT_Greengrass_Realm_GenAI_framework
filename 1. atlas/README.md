@@ -15,7 +15,7 @@
 1. [Install realm-cli](https://www.mongodb.com/docs/atlas/app-services/realm-cli/v2/#installation)
 2. [Generate API key](https://www.mongodb.com/docs/atlas/app-services/realm-cli/v2/#generate-an-api-key), assign the ```Project Owner``` permission and add your IP address to the access list
 3. [Login with your API key](https://www.mongodb.com/docs/atlas/app-services/realm-cli/v2/#authenticate-with-an-api-key)
-4. Navigate into the folder 1. atlas/app-services  `cd "1. atlas/app-services"` and import the IoT Greengrass Realm GenAI framework application `realm-cli push --local ./ --remote your-app-id` and configure the [options](https://www.mongodb.com/docs/atlas/app-services/manage-apps/create/create-with-cli/#run-the-app-creation-command) according your needs. If you are unsure which options to choose, the default ones are usually a good way to start<br><br>
+4. Navigate into the folder 1. atlas/app-services  `cd "1. atlas/app-services"` and import the IoT Greengrass Realm GenAI framework application `realm-cli push --local ./ --remote iot-greengrass-vector-search` and configure the [options](https://www.mongodb.com/docs/atlas/app-services/manage-apps/create/create-with-cli/#run-the-app-creation-command) according your needs. If you are unsure which options to choose, the default ones are usually a good way to start<br><br>
 
     After you've chosen your options, you should see the following appear: <br><br>
 
