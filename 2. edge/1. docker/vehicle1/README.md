@@ -48,7 +48,7 @@ docker logs -f container_id
 To copy MQTT Subscriber and Device Sync code to the docker container
 
 ```
-docker cp ../../application/cpp/producer <container_id>:/
+docker cp ../../2-edge/cpp/producer <container_id>:/
 ```
 
 To go inside the container
