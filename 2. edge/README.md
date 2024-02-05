@@ -17,3 +17,6 @@ Additionally, we'll run the producer Docker container to mock the vehicle sensor
 After deploying the MQTT consumer application via AWS,
 
 [Set up Vehicle Simulator to send Telemetry](./1.%20docker/vehicle1/README.md)
+
+
+Congrats! The second part is done. Now you'll continue with setting up Telemetry ["Part 3: AWS-Greengrass-Telemetry"](../2.%20edge/).
