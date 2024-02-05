@@ -4,14 +4,16 @@ IoT Device health telemetry data helps you monitor the performance of critical o
 
 To set it up,
 
-1. Open the Amazon EventBridge console, and choose Create rule.
-2. Under Name and description, enter a name and description for the rule.
-3. Under Creation method, Select `Use Pattern Form`. <br><br>![Pattern](../media/eb-pattern.png)
-4. For Event Source, choose AWS Services, For AWS Service, choose Greengrass, For Event type, select Greengrass Telemetry Data.
-5. Under Select event bus, keep the default event bus options.
-6. Under Select targets, configure your target. The following example uses an Amazon Kinesis. <br><br>![Target](../media/eb-target.png)
-7. Create on-demand <br>[AWS Kinesis Data Stream ](https://us-east-1.console.aws.amazon.com/kinesis/home?region=us-east-1#/streams/create) ![DS](../media/stream.png)
-8. Go to Mongo Cloud, inside App Services, create an HTTP Endpoint with POST method, return type as JSON, and create a function to associate the HTTP endpoint with it and use following sample code to create the telemetry health records in the MongoDB Collection
+1.Create on-demand <br>[AWS Kinesis Data Stream ](https://us-east-1.console.aws.amazon.com/kinesis/home?region=us-east-1#/streams/create) ![DS](../media/stream.png)
+
+2. Open the Amazon EventBridge console, and choose Create rule.
+3. Under Name and Description, enter a name and description for the rule.
+4. Under Select event bus, keep the default event bus options.
+5. Under the Creation method, Select `Use Pattern Form`. <br><br>![Pattern](../media/eb-pattern.png)
+6. For Event Source, choose AWS Services, For AWS Service, choose Greengrass, For Event type, select Greengrass Telemetry Data.
+7. Under Select targets, configure your target. The following example uses an Amazon Kinesis. <br><br>![Target](../media/eb-target.png)
+
+8. Go to Mongo Cloud, inside App Services, create an HTTP Endpoint with POST method, return type as JSON, and create a function to associate the HTTP endpoint with it and use the following sample code to create the telemetry health records in the MongoDB Collection
 
     ```javascript
     exports = function ({ headers, body }, response) {
