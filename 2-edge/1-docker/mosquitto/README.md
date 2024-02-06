@@ -25,3 +25,13 @@ This will pull and start the MQTT service in the background
 ```
 docker-compose up -d
 ```
+
+Ensure the docker container is running 
+
+```
+docker ps -a
+```
+
+Ensure the AWS IoT GreenGrass device is created.
+
+<img width="1488" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/5b93258e-6c93-4ff2-94ff-26c4858b00a5">
