@@ -9,7 +9,7 @@
 
 Here we are building the C++ application with MQTT consumer and Realm Device sync to consume the message from the MQTT transport and store it in the Realm database which will be synced to MongoDB in real-time via Device Sync
 
-Change the Realm App Id in `2-edge\2-edge\cpp\consumer\consumer.cpp` file.  **realm::App("REALM_APP_ID");**
+Change the Realm App Id in `2-edge\2-edge\cpp\consumer\consumer.cpp` file.  **realm::App("APP_ID");**
 
 <img width="707" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/d710554c-8e0d-4e68-87dd-4ed295058714">
 
