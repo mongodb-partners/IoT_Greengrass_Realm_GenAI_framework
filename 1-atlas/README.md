@@ -19,6 +19,7 @@
 5. Import the IoT Greengrass Realm GenAI framework application `appservices push --local ./ --remote GreenGrassTest` and configure the [options](https://www.mongodb.com/docs/atlas/app-services/manage-apps/create/create-with-cli/#run-the-app-creation-command) according to your needs. If you are unsure which options to choose, the default ones are usually a good way to start<br><br>
 
 **sample configuration**
+
 <img width="482" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/caa41c40-bb23-4f2d-bbd8-441a99a424db">
 
 
@@ -43,6 +44,7 @@
    
 
 **Screenshot of the appservice secret creation**
+
 <img width="261" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/1a41d638-4021-4a32-8344-f2597ffdd76a">
 
    These are used to upload sensor data into your S3 bucket for analysis.
