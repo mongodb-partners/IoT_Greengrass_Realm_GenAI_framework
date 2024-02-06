@@ -11,8 +11,8 @@ Here we are building the C++ application with MQTT consumer and Realm Device syn
 
 Change the Realm App Id **realm::App("REALM_APP_ID");**
 
-Enable api-key authentication and create an api-key in [Mongo App Services](https://www.mongodb.com/docs/atlas/app-services/authentication/api-key/#create-a-server-api-key)
-Use this api-key inside the c++ code in **consumer.cpp** file in **realm::App::credentials::api_key("API_KEY")**
+Enable API-key authentication and create an API-key in [Mongo App Services](https://www.mongodb.com/docs/atlas/app-services/authentication/api-key/#create-a-server-api-key)
+Use this key inside the C++ code in **consumer.cpp** file in **realm::App::credentials::api_key("API_KEY")**
 
 ![ApiKey](../../../../media/app-services-apikey-create.png)
 
@@ -29,7 +29,7 @@ cmake --build build --config Debug
 ```
 
 
-(Optional) To run the consumer in local
+(Optional) To run the consumer in the local
 
 ```
 build/consumer
@@ -39,7 +39,8 @@ Steps to deploy the C++ Application to the Greengrass device container via [AWS 
 
 1. Zip the build folder as `consumer.zip`
 2. Upload to AWS S3 Bucket using the console or [aws-cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) using `aws s3 cp consumer.zip s3://{BUCKET_NAME}/{COMPONENT_NAME}/{COMPONENT_VERSION}/`
-3. Create an AWS Greengrass Component using the console or aws-cli https://docs.aws.amazon.com/greengrass/v2/developerguide/create-components.html
+3. Ensure the role GreengrassV2TokenExchangeRole has appropriate access to read the files from the S3 bucket.
+4. Create an AWS Greengrass Component using the console or aws-cli https://docs.aws.amazon.com/greengrass/v2/developerguide/create-components.html
 
 ![Create Component](../../../../media/create-comp.png)
 4. Recipe example
