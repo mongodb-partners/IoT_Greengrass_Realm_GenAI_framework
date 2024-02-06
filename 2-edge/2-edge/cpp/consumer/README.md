@@ -47,7 +47,7 @@ Steps to deploy the C++ Application to the Greengrass device container via [AWS 
 ```sh
 RecipeFormatVersion: "2020-01-25"
 ComponentName: "cpp.consumer.realm"
-ComponentVersion: "1.0.8"
+ComponentVersion: "1.0.0"
 ComponentType: "aws.greengrass.generic"
 ComponentDescription: "Realm C++ Consumer"
 Manifests:
