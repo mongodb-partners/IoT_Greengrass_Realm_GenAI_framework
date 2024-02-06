@@ -67,3 +67,6 @@ docker ps -a
 
 Check if the device is created successfully in the AWS IoT Greengrass console.
 ![Screenshot of IoT Greengrass devices](image.png)
+
+
+Congratulations!! you have successfully set up the Greengrass container. Now let's move to set up the container for [./vehicle1](../vehicle1/)  
