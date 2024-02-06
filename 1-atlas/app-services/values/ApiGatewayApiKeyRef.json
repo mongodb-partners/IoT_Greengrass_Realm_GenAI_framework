@@ -1,5 +1,5 @@
 {
     "name": "ApiGatewayApiKeyRef",
-    "value": "ApiGatewayApiKeyRef",
+    "value": "ApiGatewayApiKey",
     "from_secret": true
 }
