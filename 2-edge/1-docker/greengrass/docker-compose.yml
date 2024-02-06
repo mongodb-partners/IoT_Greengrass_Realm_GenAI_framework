@@ -11,6 +11,8 @@ services:
       dockerfile: Dockerfile
     container_name: realmgreengrass
     image: realmgreengrass
+    environment:  
+      - PROVISION=true
     env_file:
       - .env
     volumes:  
