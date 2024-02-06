@@ -16,8 +16,9 @@ Refer to this container as `VEHICLE CONTAINER 1` throughout the setup.
 
 ### Instructions
 
+Move to the directory /2-edge/1-docker/vehicle1
 ```
-cd 2-edge/1-docker/vehicle1
+cd ../vehicle1 
 ```
 
 To build the docker image. After building, his image will consist of pre-installed libraries for realm and greengrass dependencies.
