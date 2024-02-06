@@ -28,4 +28,4 @@ Ensure the docker container is running
 docker ps -a
 ```
 
-On successful completion move the setting up the next container [./greengrass](./greengrass/) 
+On successful completion move the setting up to the next container [./greengrass](../greengrass/) 
