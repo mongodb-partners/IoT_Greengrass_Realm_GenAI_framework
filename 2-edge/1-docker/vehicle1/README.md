@@ -52,7 +52,7 @@ To view logs of running container
 docker logs -f container_id
 ```
 
-To copy MQTT Subscriber and Device Sync code to the docker container
+To copy the MQTT Subscriber and Device Sync code to the vehicle1 docker container
 
 ```
 docker cp ../../2-edge/cpp/producer <container_id>:/
