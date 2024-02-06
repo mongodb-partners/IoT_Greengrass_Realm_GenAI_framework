@@ -12,10 +12,10 @@
 
 ## 2. Set up App Services
 
-1. [Install realm-cli](https://www.mongodb.com/docs/atlas/app-services/realm-cli/v2/#installation)
-2. [Generate API key](https://www.mongodb.com/docs/atlas/app-services/realm-cli/v2/#generate-an-api-key), assign the ```Project Owner``` permission and add your IP address to the access list
+1. [Install appservice-cli](https://www.mongodb.com/docs/atlas/app-services/cli/#app-services-cli)
+2. [Generate API key](https://www.mongodb.com/docs/atlas/app-services/cli/#generate-an-api-key), assign the ```Project Owner``` permission and add your IP address to the access list
 3. [Login with your API key](https://www.mongodb.com/docs/atlas/app-services/realm-cli/v2/#authenticate-with-an-api-key)
-4. Navigate into the folder 1. atlas/app-services  `cd "1. atlas/app-services"` and import the IoT Greengrass Realm GenAI framework application `realm-cli push --local ./ --remote iot-greengrass-vector-search` and configure the [options](https://www.mongodb.com/docs/atlas/app-services/manage-apps/create/create-with-cli/#run-the-app-creation-command) according your needs. If you are unsure which options to choose, the default ones are usually a good way to start<br><br>
+4. Navigate into the folder 1. atlas/app-services  `cd "1-atlas/app-services"` and import the IoT Greengrass Realm GenAI framework application `appservices login --api-key="<my api key>" --private-api-key="<my private api key>"` and configure the [options](https://www.mongodb.com/docs/atlas/app-services/manage-apps/create/create-with-cli/#run-the-app-creation-command) according your needs. If you are unsure which options to choose, the default ones are usually a good way to start<br><br>
 
     After you've chosen your options, you should see the following appear: <br><br>
 
@@ -25,7 +25,7 @@
 
     Your App ID should be in the following format: YourAppName-XXXXX<br><br>
 
-    **Secret variables not stored in the config for security reasons and will need to be manually created for the app service functions to work.**<br><br>
+    **Secret variables are not stored in the config for security reasons and will need to be manually created for the app service functions to work.**<br><br>
 
 5. Define and Access Secrets.<br><br>
 
