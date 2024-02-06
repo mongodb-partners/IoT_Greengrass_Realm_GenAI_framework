@@ -19,7 +19,7 @@ Refer to this container as `CONSUMER CONTAINER` throughout the setup.
 
 ## Preinstall steps
 
-1. Ensure the .env file is updated with the following parameters
+1. Change the directory `2-edge/1-docker/greengrass` and ensure the .env file is updated with the following parameters
    
          GGC_ROOT_PATH=/greengrass/v2
          AWS_REGION=us-east-1
@@ -29,7 +29,9 @@ Refer to this container as `CONSUMER CONTAINER` throughout the setup.
          COMPONENT_DEFAULT_USER=ggc_user:ggc_group
 
 
-3. Ensure the "credentials.sample" is duplicated to create a "credentials" file and update the AWS credentials. i.e aws_access_key_id and aws_secret_access_key
+3. Duplicate  the "credentials.sample" and update the AWS credentials. i.e aws_access_key_id and aws_secret_access_key
+   
+   `cp greengrass-v2-credentials/credentials.sample greengrass-v2-credentials/credentials`
 
 ### Instructions
 
