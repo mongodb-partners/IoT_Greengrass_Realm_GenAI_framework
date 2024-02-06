@@ -57,10 +57,7 @@
    <img width="261" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/0be86715-6dfd-41b5-8a71-d89981dc441e">
 
 
-
-   These are used to upload sensor data into your S3 bucket for analysis.
-
-   These secrets are accessed from the function that uploads telemetry data to the S3 bucket. To do so we must [create 2 values](https://www.mongodb.com/docs/atlas/app-services/values-and-secrets/define-a-value/#create-a-new-value) `AWSAccessKeyIdRef` & `AWSSecretAccessKeyRef` and link each with the Secrets we created above.<br><br>
+   These secrets are accessed from the function that uploads telemetry data to the S3 bucket. To do so we must [update 2 values](https://www.mongodb.com/docs/atlas/app-services/values-and-secrets/define-a-value/#create-a-new-value) `AWSAccessKeyIdRef` & `AWSSecretAccessKeyRef` and link each with the Secrets we created above.<br><br>
 
 8. Configure the S3 Bucket to which the function uploads telemetry data
 
