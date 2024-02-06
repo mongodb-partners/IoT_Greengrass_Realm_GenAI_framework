@@ -17,6 +17,18 @@ The following container will have a C++ application deployed via AWS Component t
 
 Refer this container as `CONSUMER CONTAINER` throughout the setup.
 
+## Prerequisite
+
+1. Ensure the .env file is updated with the following parameters
+GGC_ROOT_PATH=/greengrass/v2
+AWS_REGION=us-east-1
+PROVISION=true
+TES_ROLE_NAME=GreengrassV2TokenExchangeRole
+TES_ROLE_ALIAS_NAME=GreengrassCoreTokenExchangeRoleAlias
+COMPONENT_DEFAULT_USER=ggc_user:ggc_group
+
+2. Ensure the credentials.sample is copied to created credentials files and update the AWS credentials. i.e aws_access_key_id and aws_secret_access_key
+
 ### Instructions
 
 After building this image, it will consist of pre-installed libraries for realm and greengrass dependencies.
@@ -48,3 +60,6 @@ To view running containers
 ```
 docker ps -a
 ```
+
+Check if the device is created successfully in the AWS IoT Greengrass console.
+![Screenshot of IoT Greengrass devices](image.png)
