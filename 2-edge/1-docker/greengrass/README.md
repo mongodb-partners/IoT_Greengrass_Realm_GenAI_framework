@@ -17,7 +17,7 @@ The following container will have a C++ application deployed via AWS Component t
 
 Refer this container as `CONSUMER CONTAINER` throughout the setup.
 
-## Prerequisite
+## Preinstall steps
 
 1. Ensure the .env file is updated with the following parameters
 GGC_ROOT_PATH=/greengrass/v2
