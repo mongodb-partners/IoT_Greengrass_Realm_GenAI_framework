@@ -38,13 +38,18 @@
    We need to create 2 secrets, `AWSAccessKeyId` & `AWSSecretAccessKey`
    Fill in the values with your AWS credentials.<br><br>
 
+       appservices secrets create
+   
+
+<img width="261" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/1a41d638-4021-4a32-8344-f2597ffdd76a">
+
    These are used to upload sensor data into your S3 bucket for analysis.
 
    These secrets are accessed from the function that uploads telemetry data to the S3 bucket. To do so we must [create 2 values](https://www.mongodb.com/docs/atlas/app-services/values-and-secrets/define-a-value/#create-a-new-value) `AWSAccessKeyIdRef` & `AWSSecretAccessKeyRef` and link each with the Secrets we created above.<br><br>
 
-7. Configure S3 Bucket to which the function uploads telemetry data
+8. Configure the S3 Bucket to which the function uploads telemetry data
 
-   To update the name of S3 bucket, go to Functions in the left navigation menu and click open exportToS3
+   To update the name of the S3 bucket, go to Functions in the left navigation menu and click open exportToS3
 
    In the following code, change the Bucket value with your bucket name.<br><br>
 
@@ -57,4 +62,4 @@
     ```
     Save and deploy if necessary.<br><br>
 
-8. Congrats! The first part is done. Now you'll continue with setting up Edge Gateway and Vehicle Simulator ["Part 2: Set up Edge Gateway and Vehicle Simulator"](../2-edge/).
+9. Congrats! The first part is done. Now you'll continue with setting up Edge Gateway and Vehicle Simulator ["Part 2: Set up Edge Gateway and Vehicle Simulator"](../2-edge/).
