@@ -1,0 +1,23 @@
+{
+    "properties": {
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "make": {
+            "bsonType": "string"
+        },
+        "model": {
+            "bsonType": "string"
+        },
+        "vin": {
+            "bsonType": "string"
+        }
+    },
+    "required": [
+        "_id",
+        "make",
+        "model",
+        "vin"
+    ],
+    "title": "Vehicle"
+}

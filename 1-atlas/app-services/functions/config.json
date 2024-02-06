@@ -1,0 +1,21 @@
+[
+    {
+        "name": "awsIotGreengrassDeviceHealth",
+        "private": false,
+        "run_as_system": true,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "exportToS3",
+        "private": true
+    },
+    {
+        "name": "onUserCreation",
+        "private": false
+    },
+    {
+        "name": "retrieveApiGatewayApiKey",
+        "private": false,
+        "disable_arg_logs": true
+    }
+]

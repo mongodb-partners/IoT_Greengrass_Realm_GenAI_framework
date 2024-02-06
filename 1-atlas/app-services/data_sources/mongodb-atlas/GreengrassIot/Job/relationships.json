@@ -1,0 +1,8 @@
+{
+    "vehicleId": {
+        "ref": "#/relationship/mongodb-atlas/GreengrassIot/Vehicle",
+        "source_key": "vehicleId",
+        "foreign_key": "_id",
+        "is_list": false
+    }
+}

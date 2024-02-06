@@ -1,0 +1,34 @@
+{
+    "properties": {
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "assignedTo": {
+            "bsonType": "objectId"
+        },
+        "createdAt": {
+            "bsonType": "date"
+        },
+        "notes": {
+            "bsonType": "string"
+        },
+        "status": {
+            "bsonType": "string"
+        },
+        "type": {
+            "bsonType": "string"
+        },
+        "vehicleId": {
+            "bsonType": "objectId"
+        }
+    },
+    "required": [
+        "_id",
+        "createdAt",
+        "notes",
+        "status",
+        "type",
+        "assignedTo"
+    ],
+    "title": "Job"
+}
