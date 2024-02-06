@@ -64,7 +64,34 @@
    <img width="1222" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/67e8fa6b-5210-45c6-be14-5f8c290adee2">
 
 
-8. Configure the S3 Bucket to which the function uploads telemetry data
+8. Validate that the MongoDB Atlas cluster database and Application Service features are created successfully.
+
+   Database:
+
+   <img width="1574" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/83e3bd51-c060-48d9-90cc-9581081e400b">
+
+
+   Application Services:
+
+   Functions:
+
+   <img width="1502" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/548f2326-56de-47e2-801f-816ac5a5a15a">
+
+   Triggers:
+
+   <img width="1502" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/4743c0f0-9a62-418b-9ae6-cc3ed369e1c2">
+
+   HTTPS Endpoints:
+
+   <img width="1502" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/f0d2fb04-4344-4858-ac01-5805dae02afc">
+
+   Linked Data Sources:
+
+   <img width="1502" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/0c7eb427-6dfd-4ce5-ba7a-154e4b4ed1a7">
+
+
+
+9. Configure the S3 Bucket to which the function uploads telemetry data
 
    To update the name of the S3 bucket, go to Functions in the left navigation menu and click open exportToS3
 
