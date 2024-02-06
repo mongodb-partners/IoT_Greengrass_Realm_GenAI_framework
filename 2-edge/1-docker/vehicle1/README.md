@@ -80,3 +80,10 @@ To run the producer which will send a message to a topic `topic` This message wi
 ```
 build/producer
 ```
+
+On successful completion , the message should be generated as shown in the below screenshot
+
+<img width="385" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/22516544-42c2-4098-9bb8-6cd0a7f62561">
+
+Congratulations!! You have almost completed the edge setup. Move next to create the producer and consumer tasks.
+
