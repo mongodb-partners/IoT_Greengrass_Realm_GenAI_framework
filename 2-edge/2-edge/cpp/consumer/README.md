@@ -9,20 +9,27 @@
 
 Here we are building the C++ application with MQTT consumer and Realm Device sync to consume the message from the MQTT transport and store it in the Realm database which will be synced to MongoDB in real-time via Device Sync
 
+
 Change the Realm App Id in `2-edge\2-edge\cpp\consumer\consumer.cpp` file.  **realm::App("APP_ID");**
 
+
 <img width="707" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/d710554c-8e0d-4e68-87dd-4ed295058714">
+
 
 
 Enable API-key authentication and create an API-key in [Mongo App Services](https://www.mongodb.com/docs/atlas/app-services/authentication/api-key/#create-a-server-api-key)
 Use this key inside the C++ code in **consumer.cpp** file in **realm::App::credentials::api_key("API_KEY")**
 
+
 <img width="1392" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/7e4f8e71-12a2-49eb-847d-e403dbde06cb">
+
 
 
 Ensure the API authentication is activated.
 
 ![ApiKey](../../../../media/app-services-apikey-create.png)
+
+
 
 ### Instructions
 
@@ -30,16 +37,15 @@ Ensure the API authentication is activated.
 cd cpp/consumer
 
 mkdir build
-
 ```
 
 Run the below command to build the C++ code.
 
-```
 
+```
 cmake -B build -S . -DCMAKE_BUILD_TYPE="Debug" .
-
 ```
+
 
 Sample output on successful completion
 
@@ -73,14 +79,21 @@ Sample output on successful completion
     -- Build files have been written to: /Users/xxxx/IoT_Greengrass_Realm_GenAI_framework/2-edge/2-edge/cpp/consumer/build
 
 
+
+
 ```
 
 cmake --build build --config Debug
 ```
 
+
+
 Sample screenshot of the successful completion of the build
 
 <img width="998" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/59a93793-d16d-4ff1-8aac-595378002326">
+
+
+
 
 
 (Optional) To run the consumer in the local
@@ -88,6 +101,8 @@ Sample screenshot of the successful completion of the build
 ```
 build/consumer
 ```
+
+
 
 Steps to deploy the C++ Application to the Greengrass device container via [AWS Components](https://docs.aws.amazon.com/greengrass/v2/developerguide/create-components.html)
 
