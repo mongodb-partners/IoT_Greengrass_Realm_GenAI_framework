@@ -43,9 +43,14 @@
        appservices secrets create
    
 
-**Screenshot of the appservice secret creation**
+   **Screenshot of the appservice secret creation**
 
-<img width="261" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/1a41d638-4021-4a32-8344-f2597ffdd76a">
+
+   <img width="261" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/7ab5f993-a028-45dc-88d5-7071b6db0b1d">
+
+   <img width="261" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/0be86715-6dfd-41b5-8a71-d89981dc441e">
+
+
 
    These are used to upload sensor data into your S3 bucket for analysis.
 
