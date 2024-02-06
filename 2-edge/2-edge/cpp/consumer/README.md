@@ -150,11 +150,12 @@ Lifecycle: {}
 
 7. Lets move to the next step [3-aws-greensgrass-telemetry](../../../../3-aws-greengrass-telemetry) to generate the telemetry data.
 
-**Troubleshooting**
+##Troubleshooting
 
 **Dataflow :** Producer --> MQTT --> Consumer --> Realm --> MongoDB Atlas
 
-**Producer: **
+**Producer:**
+
 ```
 docker exec -it <vehicle1> /bin/bash
 
