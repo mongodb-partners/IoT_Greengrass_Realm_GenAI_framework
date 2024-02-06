@@ -39,6 +39,12 @@ To view running containers
 docker ps -a
 ```
 
+At this point, all the 3 docker containers should be up and running as shown in the sample screenshot below
+
+<img width="999" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/da06f069-dbef-4a41-95d8-a52ea6b97ef9">
+
+
+
 To view logs of running container
 
 
