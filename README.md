@@ -1,7 +1,4 @@
-
-<<<<<<< develop
 # AWS IoT Greengrass | AWS Sagemaker | AWS Bedrock | MongoDB Realm | MongoDB Atlas  | MongoDB Atlas Vector Search
-
 
 ## High level Architecture
 
@@ -40,6 +37,3 @@ With the previous steps done, vehicle telemetry would flow to MongoDB, then to A
 The Fleet dashboard shows all vehicle maintenance jobs, vehicle information, and parts inventory.
 
 [Set up Fleet Dashboard](./7-web/README.md) holds the code for the web dashboard. This shows information about the fleet.
-=======
-test
->>>>>>> main
