@@ -91,19 +91,10 @@
 
 
 
-9. Configure the S3 Bucket to which the function uploads telemetry data
+9. Create a S3 bucket as "aws-iot-vehicle-telemetry" in the AWS Account.
+    
 
-   To update the name of the S3 bucket, go to Functions in the left navigation menu and click open exportToS3
+<img width="1574" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/648dc112-edda-4ebe-a87f-1b059e9ffc1b">
 
-   In the following code, change the Bucket value with your bucket name.<br><br>
 
-    ```javascript
-    const params = {
-      Bucket: 'aws-iot-vehicle-telemetry',
-      Key: `telemetry/${String(value._id)}.txt`, 
-      Body: `[${JSON.stringify(body)}]`
-    }
-    ```
-    Save and deploy if necessary.<br><br>
-
-9. Congrats! The first part is done. Now you'll continue with setting up Edge Gateway and Vehicle Simulator ["Part 2: Set up Edge Gateway and Vehicle Simulator"](../2-edge/).
+10. Congrats! The first part is done. Now you'll continue with setting up Edge Gateway and Vehicle Simulator ["Part 2: Set up Edge Gateway and Vehicle Simulator"](../2-edge/).
