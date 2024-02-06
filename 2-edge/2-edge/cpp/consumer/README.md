@@ -142,10 +142,42 @@ Manifests:
 Lifecycle: {}
 ```
 
-5. Once the component is created, open the component and deploy it to a Greengrass device using the Deploy option and create new deployment by entering the greengrass core device.
+5. Once the component is created, open the component and deploy it to a Greengrass device using the Deploy option and create a new deployment by entering the Greengrass core device.
 ![Component Deployment](../../../../media/comp-deployment.png)
-6. Wait for few minutes for the deployment to be completed. Now the producer can produce a message to the topic which will be consumed by this application deployed using the components. 
+6. Wait for a few minutes for the deployment to be completed. Now the producer can produce a message to the topic which will be consumed by this application deployed using the components. 
 
-6. **Congratulations!!**, You have now completed the setup of producer and consumer. To validate the setup, you can now try one message through producer in the vehicle container and check in the Atlas database for syncing.
+6. **Congratulations!!**, You have now completed the setup of producer and consumer. To validate the setup, you can now try one message through the producer in the vehicle container and check in the Atlas database for syncing.
 
 7. Lets move to the next step [3-aws-greensgrass-telemetry](../../../../3-aws-greengrass-telemetry) to generate the telemetry data.
+
+**Troubleshooting**
+
+Dataflow : Producer --> MQTT --> Consumer --> Realm --> MongoDB Atlas
+
+Producer: 
+```
+docker exec -it <vehicle1> /bin/bash
+
+cd /producer
+
+producer/
+
+```
+
+
+MQTT / Consumer / Realm:
+
+```
+docker exec -it <greengrass container id> /bin/bash
+
+cd /greengrass/v2/logs/
+```
+
+
+Application Services Logs(Sync):
+
+
+MongoDB Atlas
+
+
+
