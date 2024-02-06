@@ -108,8 +108,7 @@ Steps to deploy the C++ Application to the Greengrass device container via [AWS 
 
 1. Zip the build folder as consumer.zip
    ```
-   cd ..
-   zip -r consumer.zip consumer
+   zip -r consumer.zip ./
    ```
    
 3. Create a S3 folder structure `s3://aws-iot-vehicle-telemetry/cpp.consumer.realm/1.0.0/` and Upload to AWS S3 Bucket using the console or [aws-cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) using
