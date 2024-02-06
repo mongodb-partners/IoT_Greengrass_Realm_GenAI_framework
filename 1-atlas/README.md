@@ -16,7 +16,10 @@
 2. [Generate API key](https://www.mongodb.com/docs/atlas/app-services/cli/#generate-an-api-key), assign the ```Project Owner``` permission and add your IP address to the access list
 3. [Login with your API key](https://www.mongodb.com/docs/atlas/app-services/realm-cli/v2/#authenticate-with-an-api-key)
 4. Change the working directory to `cd 1-atlas/app-services`
-5. Import the IoT Greengrass Realm GenAI framework application `appservices login --api-key="<my api key>" --private-api-key="<my private api key>"` and configure the [options](https://www.mongodb.com/docs/atlas/app-services/manage-apps/create/create-with-cli/#run-the-app-creation-command) according your needs. If you are unsure which options to choose, the default ones are usually a good way to start<br><br>
+5. Import the IoT Greengrass Realm GenAI framework application `appservices push --local ./ --remote GreenGrassTest` and configure the [options](https://www.mongodb.com/docs/atlas/app-services/manage-apps/create/create-with-cli/#run-the-app-creation-command) according to your needs. If you are unsure which options to choose, the default ones are usually a good way to start<br><br>
+
+![Uploading image.png…]()
+
 
     After you've chosen your options, you should see the following appear: <br><br>
 
