@@ -138,7 +138,7 @@ Manifests:
       RequiresPrivilege: "true"
     Run: "{artifacts:decompressedPath}/consumer/build/consumer"
   Artifacts:
-  - Uri: "s3://{BUCKET_NAME}/cpp.consumer.realm/1.0.0/consumer.zip"
+  - Uri: "s3://aws-iot-vehicle-telemetry/cpp.consumer.realm/1.0.0/consumer.zip"
     Unarchive: "ZIP"
 Lifecycle: {}
 ```
