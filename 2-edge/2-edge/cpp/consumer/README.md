@@ -17,6 +17,11 @@ Change the Realm App Id in `2-edge\2-edge\cpp\consumer\consumer.cpp` file.  **re
 Enable API-key authentication and create an API-key in [Mongo App Services](https://www.mongodb.com/docs/atlas/app-services/authentication/api-key/#create-a-server-api-key)
 Use this key inside the C++ code in **consumer.cpp** file in **realm::App::credentials::api_key("API_KEY")**
 
+<img width="1392" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/7e4f8e71-12a2-49eb-847d-e403dbde06cb">
+
+
+Ensure the API authentication is activated.
+
 ![ApiKey](../../../../media/app-services-apikey-create.png)
 
 ### Instructions
