@@ -78,6 +78,10 @@ Sample output on successful completion
 cmake --build build --config Debug
 ```
 
+Sample screenshot of the successful completion of the build
+
+<img width="998" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/59a93793-d16d-4ff1-8aac-595378002326">
+
 
 (Optional) To run the consumer in the local
 
