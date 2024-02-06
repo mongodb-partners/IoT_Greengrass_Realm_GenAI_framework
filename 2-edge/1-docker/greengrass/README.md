@@ -21,17 +21,12 @@ Refer to this container as `CONSUMER CONTAINER` throughout the setup.
 
 1. Ensure the .env file is updated with the following parameter
    
-GGC_ROOT_PATH=/greengrass/v2
-
-AWS_REGION=us-east-1
-
-PROVISION=true
-
-TES_ROLE_NAME=GreengrassV2TokenExchangeRole
-
-TES_ROLE_ALIAS_NAME=GreengrassCoreTokenExchangeRoleAlias
-
-COMPONENT_DEFAULT_USER=ggc_user:ggc_group
+         GGC_ROOT_PATH=/greengrass/v2
+         AWS_REGION=us-east-1
+         PROVISION=true
+         TES_ROLE_NAME=GreengrassV2TokenExchangeRole
+         TES_ROLE_ALIAS_NAME=GreengrassCoreTokenExchangeRoleAlias
+         COMPONENT_DEFAULT_USER=ggc_user:ggc_group
 
 
 3. Ensure the "credentials.sample" is duplicated to create a "credentials" file and update the AWS credentials. i.e aws_access_key_id and aws_secret_access_key
