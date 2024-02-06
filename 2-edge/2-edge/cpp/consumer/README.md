@@ -11,6 +11,9 @@ Here we are building the C++ application with MQTT consumer and Realm Device syn
 
 Change the Realm App Id in `2-edge\2-edge\cpp\consumer\consumer.cpp` file.  **realm::App("REALM_APP_ID");**
 
+<img width="707" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/d710554c-8e0d-4e68-87dd-4ed295058714">
+
+
 Enable API-key authentication and create an API-key in [Mongo App Services](https://www.mongodb.com/docs/atlas/app-services/authentication/api-key/#create-a-server-api-key)
 Use this key inside the C++ code in **consumer.cpp** file in **realm::App::credentials::api_key("API_KEY")**
 
