@@ -43,7 +43,7 @@ Steps to deploy the C++ Application to the Greengrass device container via [AWS 
 4. Create an AWS Greengrass Component using the console or aws-cli https://docs.aws.amazon.com/greengrass/v2/developerguide/create-components.html
 
 ![Create Component](../../../../media/create-comp.png)
-4. Recipe example
+4. Recipe example. Update the S3 bucket path.
 ```sh
 RecipeFormatVersion: "2020-01-25"
 ComponentName: "cpp.consumer.realm"
