@@ -12,32 +12,39 @@
 
 Here we are building the docker image and running the container which will have pre-installed dependency libraries for Realm and Greengrass.
 
-The following container will have a C++ application deployed via AWS Component that listens for the messages from a topic name `topic` and will parse and save the message received in it to Realm local database, which then sync to Atlas via Device sync in real-time.
+The following container will have a C++ application deployed via AWS Component that listens for the messages from a topic name `topic` and will parse and save the message received in it to Realm local database, which then syncs to Atlas via Device sync in real-time.
 
 
-Refer this container as `CONSUMER CONTAINER` throughout the setup.
+Refer to this container as `CONSUMER CONTAINER` throughout the setup.
 
 ## Preinstall steps
 
-1. Ensure the .env file is updated with the following parameters
+1. Ensure the .env file is updated with the following parameter
+   
 GGC_ROOT_PATH=/greengrass/v2
+
 AWS_REGION=us-east-1
+
 PROVISION=true
+
 TES_ROLE_NAME=GreengrassV2TokenExchangeRole
+
 TES_ROLE_ALIAS_NAME=GreengrassCoreTokenExchangeRoleAlias
+
 COMPONENT_DEFAULT_USER=ggc_user:ggc_group
 
-2. Ensure the credentials.sample is copied to created credentials files and update the AWS credentials. i.e aws_access_key_id and aws_secret_access_key
+
+3. Ensure the "credentials.sample" is duplicated to create a "credentials" file and update the AWS credentials. i.e aws_access_key_id and aws_secret_access_key
 
 ### Instructions
 
-After building this image, it will consist of pre-installed libraries for realm and greengrass dependencies.
+After building this image, it will consist of pre-installed libraries for the realm and Greengrass dependencies.
 
 ```
 docker build -t realmgreengrass .
 ```
 
- * **Note**: If you want to provision the device upon startup for cloud deployments, you will need to add the following lines to your docker-compose file to mount your AWS credentials into the container to be picked up at `/root/.aws/credentials` . Ensure that the `:ro` suffix is present at the end of the command to ensure read-only access. (This will build image use long-term credentials from an IAM user). 
+ * **Note**: If you want to provision the device upon startup for cloud deployments, you will need to add the following lines to your docker-compose file to mount your AWS credentials into the container to be picked up at `/root/.aws/credentials`. Ensure that the `:ro` suffix is present at the end of the command to ensure read-only access. (This will build an image using long-term credentials from an IAM user). 
  
 ```
 environment:  
