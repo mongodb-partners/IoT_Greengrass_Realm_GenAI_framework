@@ -19,7 +19,7 @@ Refer to this container as `CONSUMER CONTAINER` throughout the setup.
 
 ## Preinstall steps
 
-1. Ensure the .env file is updated with the following parameter
+1. Ensure the .env file is updated with the following parameters
    
          GGC_ROOT_PATH=/greengrass/v2
          AWS_REGION=us-east-1
