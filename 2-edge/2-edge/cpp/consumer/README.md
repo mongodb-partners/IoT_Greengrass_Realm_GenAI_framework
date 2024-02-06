@@ -112,10 +112,10 @@ Steps to deploy the C++ Application to the Greengrass device container via [AWS 
    zip -r consumer.zip consumer
    ```
    
-3. Upload to AWS S3 Bucket using the console or [aws-cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) using
+3. Create a S3 folder structure `s3://aws-iot-vehicle-telemetry/cpp.consumer.realm/1.0.0/` and Upload to AWS S3 Bucket using the console or [aws-cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) using
 
    
-   `aws s3 cp consumer.zip s3://{BUCKET_NAME}/cpp.consumer.realm/1.0.0/`
+   `aws s3 cp consumer.zip s3://aws-iot-vehicle-telemetry/cpp.consumer.realm/1.0.0/`
    
    
 5. Ensure the role "GreengrassV2TokenExchangeRole" has appropriate permissions to read the files from the S3 bucket.
