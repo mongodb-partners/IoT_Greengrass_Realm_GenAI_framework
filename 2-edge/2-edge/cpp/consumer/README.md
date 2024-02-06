@@ -152,32 +152,52 @@ Lifecycle: {}
 
 **Troubleshooting**
 
-Dataflow : Producer --> MQTT --> Consumer --> Realm --> MongoDB Atlas
+**Dataflow :** Producer --> MQTT --> Consumer --> Realm --> MongoDB Atlas
 
-Producer: 
+**Producer: **
 ```
 docker exec -it <vehicle1> /bin/bash
 
 cd /producer
 
-producer/
+build/producer
+
+```
+
+**MQTT**
+
+```
+docker exec -it <mosquitto container id> /bin/bash
+
+cat /mqtt/log/mosquitto.log
 
 ```
 
 
-MQTT / Consumer / Realm:
+**Consumer / Realm:**
 
 ```
-docker exec -it <greengrass container id> /bin/bash
+docker exec -it <realmgreengrass container id> /bin/bash
 
-cd /greengrass/v2/logs/
+cat /greengrass/v2/logs/greengrass.log
+
+cat /greengrass/v2/logs/cpp.consumer.realm.log
+
+cd /greengrass/v2/packages/artifacts-unarchived/cpp.consumer.realm/1.0.0
+
 ```
 
 
-Application Services Logs(Sync):
+**Application Services Logs(Sync):**
+
+<img width="1583" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/61260542-d6a1-4f02-bf1a-40d4e5ae1fe4">
 
 
-MongoDB Atlas
+
+**MongoDB Atlas**
+
+<img width="882" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/79ff4fdf-71dd-4a30-9cc9-1d4c2be6ac00">
+
 
 
 
