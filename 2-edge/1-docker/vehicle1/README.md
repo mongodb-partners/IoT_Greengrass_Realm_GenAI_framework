@@ -12,12 +12,12 @@
 
 Here we are building the docker image and running the container. The following container will have a C++ application that produces the messages to a topic name `topic`
 
-Refer this container as `VEHICLE CONTAINER 1` throughout the setup.
+Refer to this container as `VEHICLE CONTAINER 1` throughout the setup.
 
 ### Instructions
 
 ```
-cd docker/vehicle1
+cd 2-edge/1-docker/vehicle1
 ```
 
 To build the docker image. After building, his image will consist of pre-installed libraries for realm and greengrass dependencies.
