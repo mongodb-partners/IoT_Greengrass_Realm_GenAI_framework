@@ -31,7 +31,49 @@ cd cpp/consumer
 
 mkdir build
 
+```
+
+Run the below command to build the C++ code.
+
+```
+
 cmake -B build -S . -DCMAKE_BUILD_TYPE="Debug" .
+
+```
+
+Sample output on successful completion
+
+
+    ...........
+    Dependencies: PACKAGE_NAME=realm-core;VERSION=13.15.1;OPENSSL_VERSION=3.0.8;ZLIB_VERSION=1.2.13;MDBREALM_TEST_SERVER_TAG=2023-06-13
+    -- Performing Test HAVE_-Wno-psabi
+    -- Performing Test HAVE_-Wno-psabi - Success
+    -- Performing Test HAVE_-Wpartial-availability
+    -- Performing Test HAVE_-Wpartial-availability - Success
+    -- Performing Test HAVE_-Wno-redundant-move
+    -- Performing Test HAVE_-Wno-redundant-move - Success
+    -- Performing Test HAVE_LINKER_lld
+    -- Performing Test HAVE_LINKER_lld - Failed
+    -- Performing Test HAVE_LINKER_gold
+    -- Performing Test HAVE_LINKER_gold - Failed
+    -- Looking for readdir64
+    -- Looking for readdir64 - not found
+    -- Performing Test HAVE-Wno-unused-but-set-variable
+    -- Performing Test HAVE-Wno-unused-but-set-variable - Success
+    -- Performing Test HAVE-Wno-unreachable-code
+    -- Performing Test HAVE-Wno-unreachable-code - Success
+    -- Performing Test HAVE-Wno-sign-compare
+    -- Performing Test HAVE-Wno-sign-compare - Success
+    -- Looking for epoll_create
+    -- Looking for epoll_create - not found
+    -- Performing Test HAVE-Wunused-but-set-variable
+    -- Performing Test HAVE-Wunused-but-set-variable - Success
+    -- Configuring done (60.7s)
+    -- Generating done (0.1s)
+    -- Build files have been written to: /Users/xxxx/IoT_Greengrass_Realm_GenAI_framework/2-edge/2-edge/cpp/consumer/build
+
+
+```
 
 cmake --build build --config Debug
 ```
