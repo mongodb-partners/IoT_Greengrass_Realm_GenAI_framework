@@ -32,7 +32,7 @@ We use the entire document to generate embeddings, if you have your data you can
 
 We need to install a few packages before we can generate the embeddings.
 
-Create an environment to run [generate_embeddings.py](./1-genererate-embeddings/bedrock/generate_embeddings.py)
+Create an environment to run [generate_embeddings.py](./1-genererate-embeddings/generate_embeddings.py)
 
 Then install the packages
 
@@ -60,7 +60,7 @@ MONGODB_DB_EMBEDDING_COLLECTION // Collection in the above DB in which embedding
 
 ATLAS_VECTOR_SEARCH_INDEX_NAME
 
-Finally run [generate_embeddings.py](./1-genererate-embeddings/bedrock/generate_embeddings.py) to generate embeddings.
+Finally run [generate_embeddings.py](./1-genererate-embeddings/generate_embeddings.py) to generate embeddings.
 
 ## 4. Set up the index in Atlas Vector Search
 
