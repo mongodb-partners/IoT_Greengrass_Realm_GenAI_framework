@@ -34,16 +34,20 @@ Ensure the API authentication is activated.
 ### Instructions
 
 ```
-cd cpp/consumer
+docker ps -a
+
+docker cp ../../2-edge/cpp/consumer <greengrass containerid>:/
+
+docker exec -it <greengrass containerid> /bin/bash
+
+cd /consumer
 
 mkdir build
-```
 
-Run the below command to build the C++ code.
-
-
-```
 cmake -B build -S . -DCMAKE_BUILD_TYPE="Debug" .
+
+cmake --build build --config Debug
+
 ```
 
 
@@ -77,14 +81,6 @@ Sample output on successful completion
     -- Configuring done (60.7s)
     -- Generating done (0.1s)
     -- Build files have been written to: /Users/xxxx/IoT_Greengrass_Realm_GenAI_framework/2-edge/2-edge/cpp/consumer/build
-
-
-
-
-```
-
-cmake --build build --config Debug
-```
 
 
 
