@@ -157,7 +157,9 @@ Lifecycle: {}
 
 6. **Congratulations!!**, You have now completed the setup of producer and consumer. To validate the setup, you can now try one message through the producer in the vehicle container and check in the Atlas database for syncing.
 
-7. Lets move to the next step [3-aws-greensgrass-telemetry](../../../../3-aws-greengrass-telemetry) to generate the telemetry data.
+7. (optional) You can move in the vehicle1 container and try to produce (ie build\producer) and check the Atlas database collection - vehicle sensor for data sync.
+
+8. Lets move to the next step [3-aws-greensgrass-telemetry](../../../../3-aws-greengrass-telemetry) to generate the telemetry data.
 
 ## Troubleshooting
 
