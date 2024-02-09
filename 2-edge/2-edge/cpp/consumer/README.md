@@ -98,13 +98,13 @@ exit from the container
 exit
 ```
 
-copy the consumer repo from the container to the consumer folder
+copy the consumer repo from the container to the base directory
 
 ```
 docker cp <realmgreengrass container>:/consumer ../../../
 ```
 
-(Optional) To run the consumer in the local
+(Optional) To run the consumer in the local. Ensure you are in the consumer folder copied from the container.
 
 ```
 build/consumer
@@ -114,8 +114,9 @@ build/consumer
 
 Steps to deploy the C++ Application to the Greengrass device container via [AWS Components](https://docs.aws.amazon.com/greengrass/v2/developerguide/create-components.html)
 
-1. Zip the build folder as consumer.zip
+1. Ensure you are in the consumer folder copied from the container and Zip the build folder as consumer.zip
    ```
+   cd ../../../ 
    zip -r consumer.zip ./
    ```
    
