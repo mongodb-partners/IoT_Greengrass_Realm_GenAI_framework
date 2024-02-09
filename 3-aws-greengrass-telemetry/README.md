@@ -43,6 +43,8 @@ To set it up,
 
 9. Create an [API Key in App services](https://www.mongodb.com/docs/atlas/app-services/authentication/api-key/) to use in AWS Firehose for granting access to AWS to trigger the HTTP Endpoint. ![ApiKey](../media/app-services-apikey-create.png)<br><br>
 
-10. Create [AWS Kinesis Data Firehose](https://us-east-1.console.aws.amazon.com/firehose/home?region=us-east-1#/create). Select source as Kinesis data stream and target as MongoDB Cloud, In Destination settings, Paste the HTTP URL in the Firehose console under MongoDB Realm webhook URL. Then use the API Key created in MongoDB Console, and paste it in API Key in Firehose console. No data transformation needed for this example. And select Not enabled in Content encoding. ![Firehose](../media/firehose.png)<br><br>
+10. Create [AWS Kinesis Data Firehose](https://us-east-1.console.aws.amazon.com/firehose/home?region=us-east-1#/create). Select source as Kinesis data stream and target as MongoDB Cloud, In Destination settings, Paste the HTTP URL in the Firehose console under MongoDB Realm webhook URL. Then use the API Key created in MongoDB Console, and paste it into API Key in the Firehose console. No data transformation is needed for this example. Select "Not enabled" in Content encoding. ![Firehose](../media/firehose.png)<br><br>
 
-11. Configure Backup settings to send failed data to S3 buckets. Select the S3 bucket name in dropdown to send failed events, and provide a prefix if needed. Then create the delivery stream.
+11. Configure Backup settings to send failed data to S3 buckets. Select the S3 bucket name in the dropdown to send failed events, and provide a prefix if needed. Then create the delivery stream.
+
+12. Hurray!! completed halfway through the complete setup. Now let's switch to mobile setup.
