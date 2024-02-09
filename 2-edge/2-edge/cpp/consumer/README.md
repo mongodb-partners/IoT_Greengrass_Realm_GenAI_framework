@@ -116,7 +116,7 @@ Steps to deploy the C++ Application to the Greengrass device container via [AWS 
 
 1. Ensure you are in the consumer folder copied from the container and Zip the build folder as consumer.zip
    ```
-   cd ../../../ 
+   cd ../../../consumer/
    zip -r consumer.zip ./
    ```
    
