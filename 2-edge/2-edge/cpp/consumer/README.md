@@ -46,8 +46,6 @@ mkdir build
 
 cmake -B build -S . -DCMAKE_BUILD_TYPE="Debug" .
 
-cmake --build build --config Debug
-
 ```
 
 
@@ -80,9 +78,14 @@ Sample output on successful completion
     -- Performing Test HAVE-Wunused-but-set-variable - Success
     -- Configuring done (60.7s)
     -- Generating done (0.1s)
-    -- Build files have been written to: /Users/xxxx/IoT_Greengrass_Realm_GenAI_framework/2-edge/2-edge/cpp/consumer/build
+    -- Build files have been written to: /consumer/build
 
 
+
+```
+cmake --build build --config Debug
+
+```
 
 Sample screenshot of the successful completion of the build
 
