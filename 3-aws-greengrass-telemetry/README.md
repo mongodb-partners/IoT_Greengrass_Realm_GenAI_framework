@@ -47,4 +47,4 @@ To set it up,
 
 11. Configure Backup settings to send failed data to S3 buckets. Select the S3 bucket name in the dropdown to send failed events, and provide a prefix if needed. Then create the delivery stream.
 
-12. Hurray!! completed halfway through the complete setup. Now let's switch to mobile setup.
+12. Hurray!! completed halfway through!! Now let's switch to [Sagemaker](../4-aws-sagemaker/predictive-maintenance/README.md) setup.
