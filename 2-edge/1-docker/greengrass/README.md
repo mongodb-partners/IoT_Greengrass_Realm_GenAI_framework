@@ -65,7 +65,7 @@ To view running containers
 docker ps -a
 ```
 
-Check if the device is created successfully in the AWS IoT Greengrass console.
+Check if the device is created successfully in the AWS IoT Greengrass console.This may take a few minutes
 ![Screenshot of IoT Greengrass devices](image.png)
 
 
