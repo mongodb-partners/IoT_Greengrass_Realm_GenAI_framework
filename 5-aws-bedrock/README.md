@@ -24,7 +24,7 @@ Request to most models should be granted fairly quickly.
 
 ## 2. Import sample data for Vehicle Knowledge Base
 
-Import the [sample vehicle kb data](./1.%20generate-embeddings/data/vehicle_knowledge_base_sample.json) into a collection on your MongoDB cluster.
+Import the [sample vehicle kb data](./1-generate-embeddings/data/vehicle_knowledge_base_sample.json) into a collection on your MongoDB cluster.
 
 We use the entire document to generate embeddings, if you have your data you can simply import it into the collection instead.
 
@@ -32,7 +32,7 @@ We use the entire document to generate embeddings, if you have your data you can
 
 We need to install a few packages before we can generate the embeddings.
 
-Create an environment to run [generate_embeddings.py](./1-genererate-embeddings/generate_embeddings.py)
+Create an environment to run [generate_embeddings.py](./1-generate-embeddings/generate_embeddings.py)
 
 Then install the packages
 
@@ -60,7 +60,7 @@ MONGODB_DB_EMBEDDING_COLLECTION // Collection in the above DB in which embedding
 
 ATLAS_VECTOR_SEARCH_INDEX_NAME
 
-Finally run [generate_embeddings.py](./1-genererate-embeddings/generate_embeddings.py) to generate embeddings.
+Finally run [generate_embeddings.py](./1-generate-embeddings/generate_embeddings.py) to generate embeddings.
 
 ## 4. Set up the index in Atlas Vector Search
 
