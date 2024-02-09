@@ -36,9 +36,9 @@ Ensure the API authentication is activated.
 ```
 docker ps -a
 
-docker cp ../../2-edge/cpp/consumer <greengrass containerid>:/
+docker cp ../../2-edge/cpp/consumer <realmgreengrass containerid>:/
 
-docker exec -it <greengrass containerid> /bin/bash
+docker exec -it <realmgreengrass containerid> /bin/bash
 
 cd /consumer
 
@@ -92,8 +92,17 @@ Sample screenshot of the successful completion of the build
 <img width="998" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/59a93793-d16d-4ff1-8aac-595378002326">
 
 
+exit from the container
 
+```
+exit
+```
 
+copy the consumer repo from the container to the consumer folder
+
+```
+docker cp <realmgreengrass container>:/consumer ../../../
+```
 
 (Optional) To run the consumer in the local
 
