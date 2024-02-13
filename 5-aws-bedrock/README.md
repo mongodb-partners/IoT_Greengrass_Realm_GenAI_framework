@@ -24,15 +24,15 @@ Request to most models should be granted fairly quickly.
 
 ## 2. Import sample data for Vehicle Knowledge Base
 
-Import the [sample vehicle kb data](./1-generate-embeddings/data/vehicle_knowledge_base_sample.json) into a collection on your MongoDB cluster.
+Import the [sample vehicle kb data](./1.%20generate-embeddings/data/vehicle_knowledge_base_sample.json) into a collection on your MongoDB cluster.
 
-We use the entire document to generate embeddings, if you have your data you can simply import it into the collection instead.
+We use the entire document to generate embeddings, if you have your own data you can simply import it into the collection instead.
 
 ## 3. Generate Embeddings
 
 We need to install a few packages before we can generate the embeddings.
 
-Create an environment to run [generate_embeddings.py](./1-generate-embeddings/generate_embeddings.py)
+Create an environment to run [generate_embeddings.py](./aws/bedrock/generate_embeddings.py)
 
 Then install the packages
 
@@ -47,39 +47,28 @@ We use Amazon's amazon.titan-embed-text-v1 model to generate embeddings, so set 
 The following, set with your AWS and MongoDB cluster information
 
 AWS_SERVER_PUBLIC_KEY
-
 AWS_SERVER_SECRET_KEY
 
 MONGODB_CONNECTION_STRING
 
 MONGODB_DB // Database name
-
 MONGODB_DB_KB_COLLECTION // Collection in the above DB in which the vehicle kb data is stored.
-
 MONGODB_DB_EMBEDDING_COLLECTION // Collection in the above DB in which embeddings are stored.
 
 ATLAS_VECTOR_SEARCH_INDEX_NAME
 
-Finally run [generate_embeddings.py](./1-generate-embeddings/generate_embeddings.py) to generate embeddings.
+Open up Atlas, go to your project and to Atlas Search and create an Atlas Vector Search index on your cluster following the steps at [Create an Atlas Vector Search Index](https://www.mongodb.com/docs/atlas/atlas-vector-search/create-index/#create-an-atlas-vector-search-index)
 
-## 4. Set up the index in Atlas Vector Search
-
-Open up Atlas, go to your project and Atlas Search, and create an index on your cluster following the steps at [Create an Atlas Vector Search Index](https://www.mongodb.com/docs/atlas/atlas-vector-search/create-index/#create-an-atlas-vector-search-index)
-
-Use the following for the index definition and save it.
+Use following for the index definition and save it. Choose the database and collection into which the embeddings will be stored.
 
 ```json
 {
-  "mappings": {
-    "dynamic": true,
-    "fields": {
-      "embedding": {
-        "dimensions": 1536,
-        "similarity": "cosine",
-        "type": "knnVector"
-      }
-    }
-  }
+  "fields": [{
+    "type": "vector",
+    "path": "embedding",
+    "numDimensions": 1536,
+    "similarity": "cosine"
+  }]
 }
 ```
 
@@ -87,16 +76,17 @@ You should now have an index setup as shown below
 
 ![AVS Index](../media/avs-index.png)
 
+Finally run [generate_embeddings.py](./aws/bedrock/generate_embeddings.py) to generate embeddings.
 
-## 5. Set up AWS Lambda function to provide an endpoint for Field Technician's Mobile Application
+## 4. Set up AWS Lambda function to provide endpoint for Field Techinician's Mobile Application
 
-Log in to AWS Console, go to Lambda functions, and click on create function.
+Log in to AWS Console, got to Lambda functions and click on create function.
 
 ![Lambda creation](../media/lambda-function-creation.png)
 
 Provide a name for your function, be sure to choose Python 3.11 as the Runtime and click on create function.
 
-### 5.1 Deploying to Lambda
+### 4.1 Deploying to Lambda
 
 Now that our chat Lambda function is created, we'll deploy our code to it.
 
@@ -118,7 +108,7 @@ Open up the Lambda function we created earlier, go to code, click on upload from
 
 Now enter the path to the zip file in your s3 bucket and click on Save.
 
-### 5.2 Setting up environment variables
+### 4.2 Setting up environment variables
 
 Open up the Lambda function, go to configuration and configure the below environment variables
 
