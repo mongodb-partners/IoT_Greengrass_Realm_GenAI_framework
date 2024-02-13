@@ -57,26 +57,18 @@ MONGODB_DB_EMBEDDING_COLLECTION // Collection in the above DB in which embedding
 
 ATLAS_VECTOR_SEARCH_INDEX_NAME
 
-Finally run [generate_embeddings.py](./aws/bedrock/generate_embeddings.py) to generate embeddings.
+Open up Atlas, go to your project and to Atlas Search and create an Atlas Vector Search index on your cluster following the steps at [Create an Atlas Vector Search Index](https://www.mongodb.com/docs/atlas/atlas-vector-search/create-index/#create-an-atlas-vector-search-index)
 
-## 4. Set up index in Atlas Vector Search
-
-Open up Atlas, go to your project and to Atlas Search and create an index on your cluster following the steps at [Create an Atlas Vector Search Index](https://www.mongodb.com/docs/atlas/atlas-vector-search/create-index/#create-an-atlas-vector-search-index)
-
-Use following for the index definition and save it.
+Use following for the index definition and save it. Choose the database and collection into which the embeddings will be stored.
 
 ```json
 {
-  "mappings": {
-    "dynamic": true,
-    "fields": {
-      "embedding": {
-        "dimensions": 1536,
-        "similarity": "cosine",
-        "type": "knnVector"
-      }
-    }
-  }
+  "fields": [{
+    "type": "vector",
+    "path": "embedding",
+    "numDimensions": 1536,
+    "similarity": "cosine"
+  }]
 }
 ```
 
@@ -84,8 +76,9 @@ You should now have an index setup as shown below
 
 ![AVS Index](../media/avs-index.png)
 
+Finally run [generate_embeddings.py](./aws/bedrock/generate_embeddings.py) to generate embeddings.
 
-## 5. Set up AWS Lambda function to provide endpoint for Field Techinician's Mobile Application
+## 4. Set up AWS Lambda function to provide endpoint for Field Techinician's Mobile Application
 
 Log in to AWS Console, got to Lambda functions and click on create function.
 
@@ -93,7 +86,7 @@ Log in to AWS Console, got to Lambda functions and click on create function.
 
 Provide a name for your function, be sure to choose Python 3.11 as the Runtime and click on create function.
 
-### 5.1 Deploying to Lambda
+### 4.1 Deploying to Lambda
 
 Now that our chat Lambda function is created, we'll deploy our code to it.
 
@@ -115,7 +108,7 @@ Open up the Lambda function we created earlier, go to code, click on upload from
 
 Now enter the path to the zip file in your s3 bucket and click on Save.
 
-### 5.2 Setting up environment variables
+### 4.2 Setting up environment variables
 
 Open up the Lambda function, go to configuration and configure the below environment variables
 
