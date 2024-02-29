@@ -16,6 +16,16 @@ Refer to this container as `VEHICLE CONTAINER 1` throughout the setup.
 
 ### Instructions
 
+
+Insert a document into the Vehicle collection of fleet_db database.
+
+
+sample document:  
+
+    {"_id": "vehlicle1", "make": "Toyota", "model": "Camry", "vin": "1HGCM82633A004352"}
+
+
+
 Move to the directory /2-edge/1-docker/vehicle1
 ```
 cd ../vehicle1 
