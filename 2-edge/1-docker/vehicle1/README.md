@@ -55,11 +55,11 @@ At this point, all the 3 docker containers should be up and running as shown in 
 
 
 
-To view logs of running container
+To view logs of running container. replace the CONTAINER_ID of yours
 
 
 ```
-docker logs -f container_id
+docker logs -f <CONTAINER_ID>
 ```
 
 To copy the MQTT Subscriber and Device Sync code to the vehicle1 docker container
