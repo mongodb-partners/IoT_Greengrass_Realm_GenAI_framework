@@ -17,7 +17,7 @@ Refer to this container as `VEHICLE CONTAINER 1` throughout the setup.
 ### Instructions
 
 
-Insert a document into the Vehicle collection of fleet_db database.
+Insert a document into the Vehicle collection of fleet_db database. Note down the vin for future reference.
 
 
 sample document:  
@@ -37,7 +37,7 @@ To build the docker image. After building, his image will consist of pre-install
 docker build -t vehicle1 .
 ```
 
-To run the docker container
+To run the docker container. Ensure the VEHICLE_ID is the same as the vin number inserted in the first step.
 
 ```
 docker run -e VEHICLE_ID=<VEHICLE_ID> --name vehicle1 -d vehicle1
