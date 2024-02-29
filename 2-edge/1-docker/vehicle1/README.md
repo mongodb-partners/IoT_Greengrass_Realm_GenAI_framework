@@ -26,6 +26,11 @@ sample document:
 
 
 
+<img width="936" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/ef8514c1-a3e8-4301-97e1-4ef241397ac2">
+
+
+
+
 Move to the directory /2-edge/1-docker/vehicle1
 ```
 cd ../vehicle1 
