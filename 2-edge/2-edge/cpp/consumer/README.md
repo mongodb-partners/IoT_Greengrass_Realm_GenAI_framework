@@ -10,7 +10,7 @@
 Here we are building the C++ application with MQTT consumer and Realm Device sync to consume the message from the MQTT transport and store it in the Realm database which will be synced to MongoDB in real-time via Device Sync
 
 
-Change the Realm App Id in `2-edge\2-edge\cpp\consumer\consumer.cpp` file.  **realm::App("APP_ID");**
+Change the Realm App ID in `2-edge\2-edge\cpp\consumer\consumer.cpp` file.  **realm::App("APP_ID");**
 
 
 <img width="707" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/d710554c-8e0d-4e68-87dd-4ed295058714">
@@ -126,8 +126,51 @@ Steps to deploy the C++ Application to the Greengrass device container via [AWS 
    `aws s3 cp consumer.zip s3://aws-iot-vehicle-telemetry/cpp.consumer.realm/1.0.0/`
    
    
-5. Ensure the role "GreengrassV2TokenExchangeRole" has appropriate permissions to read the files from the S3 bucket.
-6. Create an AWS Greengrass Component using the console or aws-cli https://docs.aws.amazon.com/greengrass/v2/developerguide/create-components.html
+5. Ensure the role "GreengrassV2TokenExchangeRole" has appropriate permissions to read the files from the S3 bucket. 
+
+
+In-line policy: GreengrassV2TokenExchangeRoleAccess
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents",
+                "logs:DescribeLogStreams",
+                "s3:GetBucketLocation"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+
+```
+
+Trust Relationship:
+```
+{
+"Version": "2012-10-17",
+"Statement": [
+    {
+        "Effect": "Allow",
+        "Principal": {
+            "Service": "credentials.iot.amazonaws.com"
+        },
+        "Action": "sts:AssumeRole"
+    }
+        ]
+}
+```
+
+<img width="689" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/c355f68c-2f26-4a8a-a6f3-0c5c2a9e17c9">
+
+
+7. Create an AWS Greengrass Component using the console or aws-cli https://docs.aws.amazon.com/greengrass/v2/developerguide/create-components.html
 
 ![Create Component](../../../../media/create-comp.png)
 4. Recipe example. Update the S3 bucket path.
@@ -150,6 +193,10 @@ Manifests:
     Unarchive: "ZIP"
 Lifecycle: {}
 ```
+
+
+
+
 
 5. Once the component is created, open the component and deploy it to a Greengrass device using the Deploy option and create a new deployment by entering the Greengrass core device.
 ![Component Deployment](../../../../media/comp-deployment.png)
