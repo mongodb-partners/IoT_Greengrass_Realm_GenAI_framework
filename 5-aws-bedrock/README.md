@@ -32,7 +32,7 @@ We use the entire document to generate embeddings, if you have your data you can
 
 We need to install a few packages before we can generate the embeddings.
 
-Create an environment to run [generate_embeddings.py](./aws/bedrock/generate_embeddings.py)
+Create an environment to run [generate_embeddings.py](./1-generate-embeddings/data/generate_embeddings.py)
 
 Then install the packages
 
