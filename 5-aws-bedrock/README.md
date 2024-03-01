@@ -4,11 +4,11 @@ This solution uses two models provided by Bedrock, the Titan Embeddings G1 to ge
 
 ## 1. Model Access
 
-Before you can use the LLMs provided by Bedrock, you'll need to request for access to them. 
+Before you can use the LLMs provided by Bedrock, you'll need to request access to them. 
 
 ![Amazon Bedrock](../media/bedrock-2.png)
 
-To request access to the required two titan models, open up Model Access from the side menu.
+To request access to the required two Titan models, open up Model Access from the side menu.
 
 ![Amazon Bedrock](../media/bedrock-3.png)
 
@@ -16,7 +16,7 @@ Then click on Manage model access. This will let you choose the models you want 
 
 ![Amazon Bedrock](../media/bedrock-4.png)
 
-Now choose the the Titan Embeddings G1 and Titan Text G1 - Lite models and click on Save changes.
+Now choose the Titan Embeddings G1 and Titan Text G1 - Lite models and click on Save changes.
 
 ![Amazon Bedrock](../media/bedrock-5.png)
 
@@ -24,9 +24,9 @@ Request to most models should be granted fairly quickly.
 
 ## 2. Import sample data for Vehicle Knowledge Base
 
-Import the [sample vehicle kb data](./1.%20generate-embeddings/data/vehicle_knowledge_base_sample.json) into a collection on your MongoDB cluster.
+Import the [sample vehicle kb data](./1-generate-embeddings/data/vehicle_knowledge_base_sample.json) into a collection on your MongoDB cluster.
 
-We use the entire document to generate embeddings, if you have your own data you can simply import it into the collection instead.
+We use the entire document to generate embeddings, if you have your data you can simply import it into the collection instead.
 
 ## 3. Generate Embeddings
 
