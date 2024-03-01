@@ -17,12 +17,12 @@ Refer to this container as `VEHICLE CONTAINER 1` throughout the setup.
 ### Instructions
 
 
-Insert a document into the Vehicle collection of fleet_db database. Note down the vin for future reference.
+Insert a document into the Vehicle collection of fleet_db database. Note down the _id for future reference.
 
 
 sample document:  
 
-    {"_id": "vehlicle1", "make": "Toyota", "model": "Camry", "vin": "1HGCM82633A004352"}
+    {"_id": "65e09427028c72731d009fae", "make": "Toyota", "model": "Camry", "vin": "1HGCM82633A004352"}
 
 
 
@@ -36,16 +36,16 @@ Move to the directory /2-edge/1-docker/vehicle1
 cd ../vehicle1 
 ```
 
-To build the docker image. After building, his image will consist of pre-installed libraries for realm and greengrass dependencies.
+To build the docker image. After building, his image will consist of pre-installed libraries for the realm and greengrass dependencies.
 
 ```
 docker build -t vehicle1 .
 ```
 
-To run the docker container. Ensure the VEHICLE_ID is the same as the vin number inserted in the first step.
+To run the docker container. Ensure the VEHICLE_ID is the same as the _id of the Vehicle collection inserted in the first step.
 
 ```
-docker run -e VEHICLE_ID=<VEHICLE_ID> --name vehicle1 -d vehicle1
+docker run -e VEHICLE_ID=<_id> --name vehicle1 -d vehicle1
 ```
 
 To view running containers
@@ -60,7 +60,7 @@ At this point, all the 3 docker containers should be up and running as shown in 
 
 
 
-To view logs of running container. replace the CONTAINER_ID of yours
+To view logs of running containers. replace the CONTAINER_ID of yours
 
 
 ```
@@ -96,7 +96,7 @@ To run the producer which will send a message to a topic `topic` This message wi
 build/producer
 ```
 
-On successful completion , the message should be generated as shown in the below screenshot
+On successful completion, the message should be generated as shown in the below screenshot
 
 <img width="385" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/22516544-42c2-4098-9bb8-6cd0a7f62561">
 
