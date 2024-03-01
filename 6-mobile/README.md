@@ -12,6 +12,8 @@ This project is bootstrapped using [`@react-native-community/cli`](https://githu
 ### pods install 
 
 ```sh
+npm install react-native
+
 cd ios && pod install && cd ..
 ```
 
