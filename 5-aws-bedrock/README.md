@@ -46,16 +46,24 @@ We use Amazon's amazon.titan-embed-text-v1 model to generate embeddings, so set 
 
 The following, set with your AWS and MongoDB cluster information
 
-AWS_SERVER_PUBLIC_KEY
-AWS_SERVER_SECRET_KEY
+AWS_SERVER_PUBLIC_KEY<br>
+AWS_SERVER_SECRET_KEY<br>
+MONGODB_CONNECTION_STRING<br>
+MONGODB_DB // Database name<br>
+MONGODB_DB_KB_COLLECTION // Collection in the above DB in which the vehicle kb data is stored.<br>
+MONGODB_DB_EMBEDDING_COLLECTION // Collection in the above DB in which embeddings are stored.<br>
+ATLAS_VECTOR_SEARCH_INDEX_NAME<br>
 
-MONGODB_CONNECTION_STRING
+Example:
 
-MONGODB_DB // Database name
-MONGODB_DB_KB_COLLECTION // Collection in the above DB in which the vehicle kb data is stored.
-MONGODB_DB_EMBEDDING_COLLECTION // Collection in the above DB in which embeddings are stored.
-
-ATLAS_VECTOR_SEARCH_INDEX_NAME
+export AWS_ACCESS_KEY_ID="AK1234OABCDGHLMN"<br>
+export AWS_SECRET_ACCESS_KEY="fskdsjklfsjdklfjkslj3"<br>
+export MONGODB_CONNECTION_STRING="mongodb+srv://test:test@fleet-db.test.mongodb.net/?retryWrites=true&w=majority"<br>
+export MONGODB_DB="GreengrassIot"<br>
+export MONGODB_DB_KB_COLLECTION="vehicle_knowledge_base_sample"<br>
+export ATLAS_VECTOR_SEARCH_INDEX_NAME="vector_index"<br>
+export MONGODB_DB_EMBEDDING_COLLECTION="iot_chat"<br>
+export EMBEDDING_MODEL_ID="amazon.titan-embed-text-v1"<br>
 
 Open up Atlas, go to your project and Atlas Search and create an Atlas Vector Search index on your cluster following the steps at [Create an Atlas Vector Search Index](https://www.mongodb.com/docs/atlas/atlas-vector-search/create-index/#create-an-atlas-vector-search-index)
 
