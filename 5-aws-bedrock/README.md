@@ -88,21 +88,22 @@ Finally run [generate_embeddings.py](./1-generate-embeddings/generate_embeddings
 
 ## 4. Set up AWS Lambda function to provide an endpoint for Field Techinician's Mobile Application
 
-Log in to AWS Console, got to Lambda functions and click on create function.
+Log in to AWS Console, go to Lambda functions, and click on the create function.
 
 ![Lambda creation](../media/lambda-function-creation.png)
 
-Provide a name for your function, be sure to choose Python 3.11 as the Runtime and click on create function.
+Provide a name for your function ```greengrass_chatendpoint```, be sure to choose Python 3.11 as the Runtime and click on create function.
 
 ### 4.1 Deploying to Lambda
 
 Now that our chat Lambda function is created, we'll deploy our code to it.
 
-On your local machine, install the packges in the same folder you place lambda_function.py in. You can install packages to a specific folder using the below command
+On your local machine, install the packages in the same folder you place lambda_function.py in. You can install packages to a specific folder ```5-aws-bedrock/2-lambda``` using the below command
 
 ```bash
 pip install --target ./ package_name
 ```
+example ```pip install --target ./  langchain langchain_community pymongo boto3```
 
 Zip up the contents of the entire folder (lambda_function.py and the other package folders). **Make sure the packages and the lambda function code are at the top level as shown below**
 
