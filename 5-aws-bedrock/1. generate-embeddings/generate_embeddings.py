@@ -50,7 +50,7 @@ client = MongoClient(MONGODB_CONNECTION_STRING)
 db = client[MONGODB_DB]
 MONGODB_COLLECTION = db[os.environ["MONGODB_DB_EMBEDDING_COLLECTION"]]
 
-_ = MongoDBAtlasVectorSearch.from_documents(
+vector_search = MongoDBAtlasVectorSearch.from_documents(
     documents=docs,
     embedding=bedrock_embedding,
     collection=MONGODB_COLLECTION,
