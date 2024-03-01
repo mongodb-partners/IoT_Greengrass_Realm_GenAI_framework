@@ -203,6 +203,9 @@ Lifecycle: {}
 ![Component Deployment](../../../../media/comp-deployment.png)
 6. Wait for a few minutes for the deployment to be completed. Now the producer can produce a message to the topic which will be consumed by this application deployed using the components. 
 
+<img width="1686" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/c03ea136-816c-4d85-ad7c-7ebcd4632cae">
+
+
 6. **Congratulations!!**, You have now completed the setup of producer and consumer. To validate the setup, you can now try one message through the producer in the vehicle container and check in the Atlas database for syncing.
 
 7. (optional) You can move in the vehicle1 container and try to produce (ie build\producer) and check the Atlas database collection - vehicle sensor for data sync.
