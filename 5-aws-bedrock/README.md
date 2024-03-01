@@ -57,9 +57,9 @@ MONGODB_DB_EMBEDDING_COLLECTION // Collection in the above DB in which embedding
 
 ATLAS_VECTOR_SEARCH_INDEX_NAME
 
-Open up Atlas, go to your project and to Atlas Search and create an Atlas Vector Search index on your cluster following the steps at [Create an Atlas Vector Search Index](https://www.mongodb.com/docs/atlas/atlas-vector-search/create-index/#create-an-atlas-vector-search-index)
+Open up Atlas, go to your project and Atlas Search and create an Atlas Vector Search index on your cluster following the steps at [Create an Atlas Vector Search Index](https://www.mongodb.com/docs/atlas/atlas-vector-search/create-index/#create-an-atlas-vector-search-index)
 
-Use following for the index definition and save it. Choose the database and collection into which the embeddings will be stored.
+Use the following for the index definition and save it. Choose the database and collection into which the embeddings will be stored.
 
 ```json
 {
@@ -76,9 +76,9 @@ You should now have an index setup as shown below
 
 ![AVS Index](../media/avs-index.png)
 
-Finally run [generate_embeddings.py](./aws/bedrock/generate_embeddings.py) to generate embeddings.
+Finally run [generate_embeddings.py](./1-generate-embeddings/generate_embeddings.py) to generate embeddings.
 
-## 4. Set up AWS Lambda function to provide endpoint for Field Techinician's Mobile Application
+## 4. Set up AWS Lambda function to provide an endpoint for Field Techinician's Mobile Application
 
 Log in to AWS Console, got to Lambda functions and click on create function.
 
