@@ -9,19 +9,20 @@ This project is bootstrapped using [`@react-native-community/cli`](https://githu
 
 > **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
-### pods install 
 
-```sh
-cd ios && pod install && cd ..
-```
-
-### node module install
+### Node Modules install
 
 ```sh
 # using yarn
 yarn install
 ```
 
+
+### Pod install 
+
+```sh
+cd ios && pod install && cd ..
+```
 
 
 ### Step 1: Start the Metro Server
