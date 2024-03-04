@@ -32,7 +32,7 @@ Log in to AWS Console, go to Lambda functions, and click on the create function.
 
 ![Lambda creation](../../media/lambda-function-creation.png)
 
-Provide a name for your function, be sure to choose Python 3.11 as the Runtime and click on Create function.
+Provide a name ```AWSIoTVehicleFailurePredict``` for your function, be sure to choose Python 3.11 as the Runtime and click on Create function.
 
 ## 2.2 Deploying to Lambda
 
