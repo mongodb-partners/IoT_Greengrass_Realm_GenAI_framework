@@ -62,6 +62,11 @@ Now enter the path to the zip file in your s3 bucket and click on Save.
 
 Open up the Lambda function, go to configuration, and configure the below environment variables
 
+ATLAS_URI<br>
+DB_NAME<br>
+FAILURE_THRESHOLD<br>
+SAGEMAKER_ENDPOINT<br>
+
 ![Lambda env vars](../../media/predict-env-vars.png)
 
 Fill in the values with your cluster's connection string and your Sagemaker endpoint and save.
@@ -80,4 +85,4 @@ To set up the trigger, open your Lambda function and click on Add trigger.
 
 ![Lambda trigger](../../media/lambda-s3-trigger.png)
 
-In the Select, a source dropdown, choose S3, fill in the prefix (the one used in the export function in app services), check Acknowledge, and click on Add.
+In the Select, a source dropdown, choose S3, fill in the prefix (the one used in the export function in  the app services), check Acknowledge, and click on Add.
