@@ -51,7 +51,7 @@ ATLAS_VECTOR_SEARCH_INDEX_NAME<br>
 Example:
 
 export AWS_SERVER_PUBLIC_KEY="AK1234OABCDGHLMN"<br>
-export AWS_SECRET_ACCESS_KEY="fskdsjklfsjdklfjkslj3"<br>
+export AWS_SERVER_SECRET_KEY="fskdsjklfsjdklfjkslj3"<br>
 export MONGODB_CONNECTION_STRING="mongodb+srv://test:test@fleet-db.test.mongodb.net/?retryWrites=true&w=majority"<br>
 export MONGODB_DB="GreengrassIot"<br>
 export MONGODB_DB_KB_COLLECTION="vehicle_knowledge_base_sample"<br>
