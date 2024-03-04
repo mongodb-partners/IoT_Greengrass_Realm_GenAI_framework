@@ -92,6 +92,12 @@ Sample screenshot of the successful completion of the build
 <img width="998" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/59a93793-d16d-4ff1-8aac-595378002326">
 
 
+(Optional) To run the consumer in the local. Ensure you are in the consumer folder copied from the container.
+
+```
+build/consumer
+```
+
 exit from the container
 
 ```
@@ -104,11 +110,7 @@ copy the consumer repo from the container to the base directory
 docker cp <realmgreengrass container>:/consumer ../../../
 ```
 
-(Optional) To run the consumer in the local. Ensure you are in the consumer folder copied from the container.
 
-```
-build/consumer
-```
 
 
 
