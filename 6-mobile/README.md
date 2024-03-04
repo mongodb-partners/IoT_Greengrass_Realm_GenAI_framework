@@ -1,6 +1,6 @@
 # Fleet mobile app
 
-This React Native application enables users to manage their assigned jobs. The app is powered by [Realm Device Sync](https://www.mongodb.com/docs/realm/sdk/react-native/sync-data/configure-a-synced-realm/) for real-time synchronization of jobs.
+This React Native application enables users to manage their assigned jobs. The app is powered by Realm Device Sync https://www.mongodb.com/docs/realm/sdk/react-native/sync-data/configure-a-synced-realm/] for real-time synchronization of jobs.
 
 
 This project is bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
@@ -9,21 +9,20 @@ This project is bootstrapped using [`@react-native-community/cli`](https://githu
 
 > **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
-### pods install 
 
-```sh
-npm install react-native
-
-cd ios && pod install && cd ..
-```
-
-### node module install
+### Node Modules install
 
 ```sh
 # using yarn
 yarn install
 ```
 
+
+### Pod install 
+
+```sh
+cd ios && pod install && cd ..
+```
 
 
 ### Step 1: Start the Metro Server
