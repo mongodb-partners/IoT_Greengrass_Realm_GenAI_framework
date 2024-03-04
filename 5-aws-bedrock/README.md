@@ -34,12 +34,6 @@ We need to install a few packages before we can generate the embeddings.
 
 Create an environment to run [generate_embeddings.py](./1-generate-embeddings/generate_embeddings.py)
 
-Then install the packages
-
-```bash
-pip install --target ./  langchain langchain_community pymongo boto3
-```
-
 Before we can run it, we'll need to set up a few environment variables
 
 We use Amazon's amazon.titan-embed-text-v1 model to generate embeddings, so set EMBEDDING_MODEL_ID to amazon.titan-embed-text-v1
