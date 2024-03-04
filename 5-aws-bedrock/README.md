@@ -37,7 +37,7 @@ Create an environment to run [generate_embeddings.py](./1-generate-embeddings/ge
 Then install the packages
 
 ```bash
-pip install langchain langchain_community pymongo boto3
+pip install --target ./  langchain langchain_community pymongo boto3
 ```
 
 Before we can run it, we'll need to set up a few environment variables
