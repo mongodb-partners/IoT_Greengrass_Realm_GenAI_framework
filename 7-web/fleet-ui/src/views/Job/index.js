@@ -48,10 +48,9 @@ const Job = () => {
                             }
                           />
                         </TableCell>
-                          <TableCell>{users?.find(user => String(user?.userId) == String(row.assignedTo))?.name || 'NA'}</TableCell>
+                        <TableCell>{users?.find((user) => String(user?.userId) == String(row.assignedTo))?.name || 'NA'}</TableCell>
                       </TableRow>
-                      )
-                    )}
+                    ))}
                   </TableBody>
                 </Table>
               </TableContainer>

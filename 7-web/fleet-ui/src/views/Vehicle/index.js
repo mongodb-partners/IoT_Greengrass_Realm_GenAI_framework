@@ -29,10 +29,12 @@ const Vehicle = () => {
                   </TableHead>
                   <TableBody>
                     {vehicles.map((row, idx) => {
-                      let vJob = jobs?.find(job => String(job?.vehicleId._id) == String(row?._id) && ['TODO', 'INPROGRESS'].includes(job.status))
+                      let vJob = jobs?.find(
+                        (job) => String(job?.vehicleId._id) == String(row?._id) && ['TODO', 'INPROGRESS'].includes(job.status)
+                      );
                       let status = vJob ? 'Requires Maintenance' : 'Healthy';
                       return (
-                        <TableRow style={{ backgroundColor: status == 'Requires Maintenance' ? '#faf2f1' : '#ecfff2'}} key={idx}>
+                        <TableRow style={{ backgroundColor: status == 'Requires Maintenance' ? '#faf2f1' : '#ecfff2' }} key={idx}>
                           <TableCell component="th" scope="row">
                             {row.make}
                           </TableCell>
@@ -46,7 +48,7 @@ const Vehicle = () => {
                             {status}
                           </TableCell>
                         </TableRow>
-                      )
+                      );
                     })}
                   </TableBody>
                 </Table>
