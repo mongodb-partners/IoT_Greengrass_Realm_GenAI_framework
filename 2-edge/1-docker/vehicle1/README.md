@@ -48,6 +48,8 @@ To run the docker container. Ensure the VEHICLE_ID is the same as the _id of the
 docker run -e VEHICLE_ID=<_id> --name vehicle1 -d vehicle1
 ```
 
+Example: for the above document inserted in step1 the command is ``` docker run -e VEHICLE_ID="65e09427028c72731d009fae" --name vehicle1 -d vehicle1 ```
+
 To view running containers
 
 ```
