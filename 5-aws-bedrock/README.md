@@ -113,8 +113,16 @@ Now enter the path to the zip file in your s3 bucket and click on Save.
 
 ### 4.2 Setting up environment variables
 
-Open up the Lambda function, go to configuration and configure the below environment variables
+Open up the Lambda function, go to configuration, and configure the below environment variables
+
+ATLAS_VECTOR_SEARCH_INDEX_NAME<br>
+MODEL_ID = amazon.titan-text-lite-v1 <br>
+MONGODB_CONNECTION_STRING<br>
+MONGODB_DB<br>
+MONGODB_DB_COLLECTION<br>
+
+
 
 ![Lambda env vars](../media/chat-env-vars.png)
 
-Fill in the values with your cluster's connection string, db name, collection name and save.
+Fill in the values with your cluster's connection string, db name, and collection name, and save.
