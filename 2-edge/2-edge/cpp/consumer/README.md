@@ -98,6 +98,21 @@ Sample screenshot of the successful completion of the build
 build/consumer
 ```
 
+on a successful run, it will consume the data . Below is a sample output.
+
+```
+
+Connecting to the MQTT server...OK
+Waiting for messages on topic: 'topic'
+Starting
+{"current":0.680375434309419,"timestamp":1709556676763,"vehicleId":"65e09427028c72731d009fae","voltage":6.521360975467302}
+collection changed 4 objects in collection
+Done writing to Realm
+topic: {"current":0.680375434309419,"timestamp":1709556676763,"vehicleId":"65e09427028c72731d009fae","voltage":6.521360975467302}
+
+```
+
+
 exit from the container
 
 ```
