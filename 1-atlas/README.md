@@ -90,6 +90,9 @@
    <img width="1502" alt="image" src="https://github.com/mongodb-partners/IoT_Greengrass_Realm_GenAI_framework/assets/101570105/0c7eb427-6dfd-4ce5-ba7a-154e4b4ed1a7">
 
 
+9. Add `aws-sdk` depencency to the functions to allow the function to use aws sdk library which is used for exporting the sensor data to the s3 bucket.
+
+   ![aws-sdk-lib](../media/realm-fn-add-dependency.png)
 
 9. Create a S3 bucket as "aws-iot-vehicle-telemetry" in the AWS Account.
     
