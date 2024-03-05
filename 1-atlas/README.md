@@ -98,3 +98,12 @@
 
 
 10. Congrats! The first part is done. Now you'll continue with setting up Edge Gateway and Vehicle Simulator ["Part 2: Set up Edge Gateway and Vehicle Simulator"](../2-edge/).
+
+
+
+## Debugging
+
+In case if you don't see the triggers workig as expected, check if it is enabled in the triggers section in App Services
+
+
+![Enable Trigger](../media/trigger-update.png)
