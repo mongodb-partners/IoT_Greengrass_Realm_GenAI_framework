@@ -27,7 +27,7 @@ exports = async function () {
       
       const params = {
         Bucket: 'aws-iot-vehicle-telemetry',
-        Key: `telemetry/${String(value._id)}.txt`,
+        Key: `IIoT/${String(value._id)}.txt`,
         Body: `[${JSON.stringify(body)}]`
       }
       
