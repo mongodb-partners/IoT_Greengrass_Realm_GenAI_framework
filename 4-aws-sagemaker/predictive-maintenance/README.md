@@ -71,7 +71,13 @@ SAGEMAKER_ENDPOINT<br>
 
 Fill in the values with your cluster's connection string and your Sagemaker endpoint and save.
 
-## 2.4 Setting up S3 trigger
+## 2.4 Add Required Permissions
+
+Attach required permissions for the lambda function. It requires access to the S3 Bucket and to the Sagemaker
+
+![Lambda Permission](../../media/lambda-sg-s3-permission.png)
+
+## 2.5 Setting up S3 trigger
 
 The final step is to run this function, to do that we'll set up a trigger that runs it when new sensor data is uploaded to a source S3 bucket.
 
@@ -86,3 +92,9 @@ To set up the trigger, open your Lambda function and click on Add trigger.
 ![Lambda trigger](../../media/lambda-s3-trigger.png)
 
 In the Select, a source dropdown, choose S3, fill in the prefix (the one used in the export function in  the app services), check Acknowledge, and click on Add.
+
+## 2.6 Update threshold (Optional)
+
+You can also update the threshold value in the environment variables of the lambda. This threshold limit increases the probablity of the creation of jobs based on the current and voltage value received from the sensors.
+
+![Threshold Value](../../media/lambda-env-threshold.png)
