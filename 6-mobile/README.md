@@ -10,6 +10,12 @@ This project is bootstrapped using [`@react-native-community/cli`](https://githu
 > **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
 
+## Configuration
+
+Update the App Services Application ID and AWS Lambda http url for the chat assistant inside the `sync.config.js` 
+
+   ![DS](../media/update-mobile-app-config.png)
+
 ### Node Modules install
 
 ```sh
