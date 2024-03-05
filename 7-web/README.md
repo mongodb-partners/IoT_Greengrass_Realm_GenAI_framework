@@ -18,6 +18,12 @@ To get started with the application, follow these steps:
     npm install
     ```
 
+## Configuration
+
+Update the App Services Application ID in the config file
+
+![AppUser](../media/fleet-ui-config-update.png)
+
 ## Usage
 
 To start the application, use the following commands:
@@ -34,7 +40,7 @@ To start the application, use the following commands:
 
 3. **Enable email-password authentication and create an App User with email and password in [Atlas App Services](https://www.mongodb.com/docs/atlas/app-services/users/create/#manually-create-an-email-password-user)**
 
-![AppUser](../../media/app-services-user-create.png)
+![AppUser](../media/app-services-user-create.png)
   
 ## Features
 
