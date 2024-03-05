@@ -17,7 +17,7 @@
     "@realm/react": "^0.6.2",
     "path-browserify": "^1.0.1",
     "react": "18.2.0",
-    "react-native": "0.73.5",
+    "react-native": "^0.73.5",
     "react-native-dropdown-picker": "^5.4.6",
     "react-native-gesture-handler": "^2.15.0",
     "react-native-get-random-values": "^1.10.0",
